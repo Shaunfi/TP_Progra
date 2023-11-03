@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rami\\Desktop\\Proyectos\\TP DE MIERDA\\TP_Progra\\Proyecto\\Frontend\\Frontend.csproj": {}
+    "C:\\Users\\machi\\OneDrive\\Escritorio\\TP-COMPARTIDO\\Proyecto\\Frontend\\Frontend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rami\\Desktop\\Proyectos\\TP DE MIERDA\\TP_Progra\\Proyecto\\Frontend\\Frontend.csproj": {
+    "C:\\Users\\machi\\OneDrive\\Escritorio\\TP-COMPARTIDO\\Proyecto\\Frontend\\Frontend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rami\\Desktop\\Proyectos\\TP DE MIERDA\\TP_Progra\\Proyecto\\Frontend\\Frontend.csproj",
+        "projectUniqueName": "C:\\Users\\machi\\OneDrive\\Escritorio\\TP-COMPARTIDO\\Proyecto\\Frontend\\Frontend.csproj",
         "projectName": "Frontend",
-        "projectPath": "C:\\Users\\Rami\\Desktop\\Proyectos\\TP DE MIERDA\\TP_Progra\\Proyecto\\Frontend\\Frontend.csproj",
-        "packagesPath": "C:\\Users\\Rami\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rami\\Desktop\\Proyectos\\TP DE MIERDA\\TP_Progra\\Proyecto\\Frontend\\obj\\",
+        "projectPath": "C:\\Users\\machi\\OneDrive\\Escritorio\\TP-COMPARTIDO\\Proyecto\\Frontend\\Frontend.csproj",
+        "packagesPath": "C:\\Users\\machi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\machi\\OneDrive\\Escritorio\\TP-COMPARTIDO\\Proyecto\\Frontend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Rami\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\machi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
