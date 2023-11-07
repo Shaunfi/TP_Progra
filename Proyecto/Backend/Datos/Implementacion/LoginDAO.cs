@@ -1,10 +1,5 @@
 ﻿using System.Data;
-<<<<<<< HEAD
-using TPPepas.Datos.Interfaz;
-=======
 using Backend.Datos.Interfaz;
-using Microsoft.Data.SqlClient;
->>>>>>> fcad98686c3f9488ee4943b6662e3ae37574364a
 
 namespace Backend.Datos.Implementacion
 {

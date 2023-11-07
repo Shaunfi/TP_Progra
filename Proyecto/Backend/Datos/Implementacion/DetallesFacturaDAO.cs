@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-﻿using Farmacia.Entidades;
-using TPPepas.Datos.Interfaz;
-=======
-﻿using Backend.Entidades;
-using System;
-using System.Collections.Generic;
+using Backend.Entidades;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Backend.Datos.Interfaz;
-using Microsoft.Data.SqlClient;
->>>>>>> fcad98686c3f9488ee4943b6662e3ae37574364a
 
 namespace Backend.Datos.Implementacion
 {

@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\joseg\\OneDrive\\Documentos\\UTN Cba\\TP II\\ProyectoTP\\TP_Progra\\Proyecto\\APIFarmacia\\APIFarmacia.csproj": {}
   },
   "projects": {
@@ -13,30 +12,13 @@
         "projectPath": "C:\\Users\\joseg\\OneDrive\\Documentos\\UTN Cba\\TP II\\ProyectoTP\\TP_Progra\\Proyecto\\APIFarmacia\\APIFarmacia.csproj",
         "packagesPath": "C:\\Users\\joseg\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\joseg\\OneDrive\\Documentos\\UTN Cba\\TP II\\ProyectoTP\\TP_Progra\\Proyecto\\APIFarmacia\\obj\\",
-=======
-    "C:\\Users\\Rami\\Desktop\\Proyectos\\TP DE MIERDA\\TP_Progra\\Proyecto\\APIFarmacia\\APIFarmacia.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\Rami\\Desktop\\Proyectos\\TP DE MIERDA\\TP_Progra\\Proyecto\\APIFarmacia\\APIFarmacia.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Rami\\Desktop\\Proyectos\\TP DE MIERDA\\TP_Progra\\Proyecto\\APIFarmacia\\APIFarmacia.csproj",
-        "projectName": "APIFarmacia",
-        "projectPath": "C:\\Users\\Rami\\Desktop\\Proyectos\\TP DE MIERDA\\TP_Progra\\Proyecto\\APIFarmacia\\APIFarmacia.csproj",
-        "packagesPath": "C:\\Users\\Rami\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rami\\Desktop\\Proyectos\\TP DE MIERDA\\TP_Progra\\Proyecto\\APIFarmacia\\obj\\",
->>>>>>> fcad98686c3f9488ee4943b6662e3ae37574364a
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
           "C:\\Users\\joseg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-          "C:\\Users\\Rami\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> fcad98686c3f9488ee4943b6662e3ae37574364a
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -132,6 +114,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

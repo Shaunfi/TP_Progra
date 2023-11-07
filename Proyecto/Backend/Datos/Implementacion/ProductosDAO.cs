@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-﻿using Farmacia.Entidades;
-using System.Data;
-using TPPepas.Datos.Interfaz;
-
-namespace TPPepas.Datos.Implementacion
-=======
-﻿using Backend.Entidades;
-using Microsoft.Data.SqlClient;
+using Backend.Entidades;
 using System.Data;
 using Backend.Datos.Interfaz;
 namespace Backend.Datos.Implementacion
->>>>>>> fcad98686c3f9488ee4943b6662e3ae37574364a
 {
     public class ProductosDAO : IProductos
     {

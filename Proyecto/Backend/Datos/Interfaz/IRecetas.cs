@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-﻿using Farmacia.Entidades;
-=======
-﻿using Backend.Entidades;
-using Microsoft.Data.SqlClient;
->>>>>>> fcad98686c3f9488ee4943b6662e3ae37574364a
+using Backend.Entidades;
 
 namespace Backend.Datos.Interfaz
 {

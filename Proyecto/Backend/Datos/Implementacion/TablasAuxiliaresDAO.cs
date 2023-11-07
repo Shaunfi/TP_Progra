@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-﻿using System.Data;
-using TPPepas.Datos.Interfaz;
-using TPPepas.Entidades;
-
-namespace TPPepas.Datos.Implementacion
-=======
 ﻿using Backend.Entidades;
 using System.Data;
 using Backend.Datos.Interfaz;
-using Microsoft.Data.SqlClient;
 
 namespace Backend.Datos.Implementacion
->>>>>>> fcad98686c3f9488ee4943b6662e3ae37574364a
 {
     public class TablasAuxiliaresDAO : ITablasAuxiliares
     {

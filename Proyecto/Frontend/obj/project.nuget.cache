@@ -1,14 +1,18 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "S8iPYAOVuYYHYAFMO9u/2HVkekXSskNMTkeIC6oNj/G/qLuM1rjVLb2HjT+xNU3a9vfA4AlZVEpqdfm/7yCAKw==",
+  "dgSpecHash": "V1OZ+TQ545LJRWUP0/svhoDchwoczmEyJkHuaffA6W63e0H2GXWbymDjCB8P9KXed93C7u+mpcV3OPFRsqPY+Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\joseg\\OneDrive\\Documentos\\UTN Cba\\TP II\\ProyectoTP\\TP_Progra\\Proyecto\\Frontend\\Frontend.csproj",
-=======
-  "dgSpecHash": "yReJhtRFcPRK0WeiaWXF9T8AK0U6cmEy0kUAQ4q+iRvj6Yml6hbJjavijqAVuliekDEIzA8RgYH+xPM+aK99jg==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Rami\\Desktop\\Proyectos\\TP DE MIERDA\\TP_Progra\\Proyecto\\Frontend\\Frontend.csproj",
->>>>>>> fcad98686c3f9488ee4943b6662e3ae37574364a
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\joseg\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\joseg\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\joseg\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\joseg\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\joseg\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\joseg\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\joseg\\.nuget\\packages\\system.data.sqlclient\\4.8.5\\system.data.sqlclient.4.8.5.nupkg.sha512",
+    "C:\\Users\\joseg\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\joseg\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }
