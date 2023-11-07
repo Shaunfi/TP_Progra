@@ -1,4 +1,6 @@
 ﻿using Backend.Entidades;
+using Backend.Factory;
+using Backend.Servicio;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -9,15 +11,21 @@ namespace APIFarmacia.Controllers
     [ApiController]
     public class ProductosController : ControllerBase
     {
-
+        private IServicios servicio;
         private static List<Productos> lProductos = new List<Productos>();
+
+        // agregar constructor que cree el servicio
+        public ProductosController()
+        {
+            // ver como llamo a la fabrica desde aca
+            servicio = new FactoryAbs().CrearServicio();
+        }
 
         // GET: api/<ProductosController>
         [HttpGet]
-        public IActionResult Get()
+        public List<object> Get()
         {
-
-            return Ok(lProductos);
+            return servicio.Productos.Listar();
         }
 
         //// GET api/<ProductosController>/5
@@ -33,10 +41,10 @@ namespace APIFarmacia.Controllers
         {
             if (dto != null)
             {
-                return BadRequest();
+                bool result = servicio.Productos.Agregar(dto);
+                return Ok("Se registro el producto exitosamente!");
             }
-            lProductos.Add(dto);
-            return Ok("Se registro el producto exitosamente!");
+            return BadRequest("Debes pasar el producto");
         }
 
         //// PUT api/<ProductosController>/5

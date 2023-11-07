@@ -1,6 +1,8 @@
 ﻿using System.Runtime.InteropServices;
 using Backend.Entidades;
+using Frontend.Client;
 using Frontend.Presentaciones_2.Avisos;
+using Newtonsoft.Json;
 
 namespace Frontend.Presentaciones_2.PClientes
 {
@@ -79,6 +81,19 @@ namespace Frontend.Presentaciones_2.PClientes
         private void CargarComboBox(ComboBox combo, string propID, string propDisplay, List<object> listaObjetos)
         {
             combo.DataSource = listaObjetos;
+            combo.ValueMember = propID;
+            combo.DisplayMember = propDisplay;
+            combo.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+
+
+        // metodo asincrono para cargar los combo box
+        private async void CargarComboAsync(ComboBox combo, string propID, string propDisplay, List<object> listaObjetos)
+        {
+            string url = "";
+            var data = await ClientSingleton.GetInstance().GetAsync(url);
+            List<object> lista = JsonConvert.DeserializeObject<List<object>>(data);
+            combo.DataSource = lista;
             combo.ValueMember = propID;
             combo.DisplayMember = propDisplay;
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
