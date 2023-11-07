@@ -20,6 +20,7 @@ using TPPepas.Presentaciones_2.PProductos;
 using TPPepas.Presentaciones_2.PPedidos;
 using TPPepas.Factory;
 using Farmacia.Entidades;
+using TPPepas.Presentaciones_2.Ayuda;
 
 namespace TPPepas.Presentaciones_2
 {
@@ -49,20 +50,20 @@ namespace TPPepas.Presentaciones_2
 
         private void hideSubMenu()
         {
-            if(pnlSubMenuVenta.Visible == true)
+            if (pnlSubMenuVenta.Visible == true)
                 pnlSubMenuVenta.Visible = false;
-            if(pnlSubMenuProducto.Visible == true) 
+            if (pnlSubMenuProducto.Visible == true)
                 pnlSubMenuProducto.Visible = false;
-            if (pnlSubMenuCliente.Visible == true) 
+            if (pnlSubMenuCliente.Visible == true)
                 pnlSubMenuCliente.Visible = false;
-            if (pnlSubMenuProveedor.Visible == true) 
-                pnlSubMenuProveedor.Visible=false;
-            if (pnlSubMenuPedido.Visible == true) 
-                pnlSubMenuPedido.Visible=false;
-            if (pnlSubMenuInforme.Visible == true) 
-                pnlSubMenuInforme.Visible=false;
-            if (pnlSubMenuAyuda.Visible == true) 
-                pnlSubMenuAyuda.Visible=false;
+            if (pnlSubMenuProveedor.Visible == true)
+                pnlSubMenuProveedor.Visible = false;
+            if (pnlSubMenuPedido.Visible == true)
+                pnlSubMenuPedido.Visible = false;
+            if (pnlSubMenuInforme.Visible == true)
+                pnlSubMenuInforme.Visible = false;
+            if (pnlSubMenuAyuda.Visible == true)
+                pnlSubMenuAyuda.Visible = false;
         }
 
         private void showSubMenu(Panel subMenu)
@@ -119,7 +120,7 @@ namespace TPPepas.Presentaciones_2
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            
+
         }
 
 
@@ -239,9 +240,12 @@ namespace TPPepas.Presentaciones_2
 
         private void btnConsultarPedido_Click(object sender, EventArgs e)
         {
-            new FrmConsultarPedido(fabrica).ShowDialog();  
+            new FrmConsultarPedido(fabrica).ShowDialog();
             hideSubMenu();
         }
+
+
+        //--------------------------USUARIO---------------------------
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
@@ -264,6 +268,20 @@ namespace TPPepas.Presentaciones_2
         private void panelContenedor_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+        //--------------------------AYUDA---------------------------
+
+        private void btnAcercaDe_Click(object sender, EventArgs e)
+        {
+            new AcercaDe(fabrica).ShowDialog();
+            hideSubMenu();
+        }
+
+        private void btnPreguntas_Click(object sender, EventArgs e)
+        {
+            new PreguntasFrecuentes(fabrica).ShowDialog();
+            hideSubMenu();
         }
     }
 }

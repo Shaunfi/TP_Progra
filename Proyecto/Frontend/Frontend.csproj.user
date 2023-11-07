@@ -1,2 +1,80 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" />
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Presentaciones 2\Avisos\FrmCancelar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Avisos\FrmError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Avisos\FrmExito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Avisos\FrmSalir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Avisos\FrmSalir2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Avisos\FrmSalir3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Avisos\FrmSeleccionCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Ayuda\AcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Ayuda\PreguntasFrecuentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Clientes\FrmAgregarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Clientes\FrmConsultarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Clientes\FrmModificarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Facturaciones\FrmConsultarVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Facturaciones\FrmFacturaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Facturaciones\FrmFacturacionesBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Facturaciones\FrmFacturacionesReceta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Login\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Login\FrmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Pedidos\FrmAgregarPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Pedidos\FrmConsultarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Productos\FrmAgregarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Productos\FrmConsultarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Proveedores\FrmAgregarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentaciones 2\Proveedores\FrmConsultarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

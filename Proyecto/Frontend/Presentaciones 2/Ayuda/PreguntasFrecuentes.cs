@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TPPepas.Presentaciones_2.Avisos;
 
 namespace TPPepas.Presentaciones_2.Ayuda
 {
@@ -15,6 +16,17 @@ namespace TPPepas.Presentaciones_2.Ayuda
         public PreguntasFrecuentes()
         {
             InitializeComponent();
+        }
+
+        private void btnSalir2_Click(object sender, EventArgs e)
+        {
+            FrmSalir2 salir = new FrmSalir2();
+            salir.ShowDialog();
+
+            if (salir.resultado)
+            {
+                this.Dispose();
+            }
         }
     }
 }

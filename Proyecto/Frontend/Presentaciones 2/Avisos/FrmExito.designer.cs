@@ -85,7 +85,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::TPPepas.Properties.Resources.check_symbol_in_green_button_free_vector_removebg_preview1;
+            this.pictureBox1.Image = global::Frontend.Properties.Resources.check_symbol_in_green_button_free_vector_removebg_preview1;
             this.pictureBox1.Location = new System.Drawing.Point(20, 50);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(5);

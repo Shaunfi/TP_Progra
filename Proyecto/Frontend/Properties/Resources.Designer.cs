@@ -556,6 +556,16 @@ namespace Frontend.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LEON_fotor_bg_remover_20231106204830 {
+            get {
+                object obj = ResourceManager.GetObject("LEON-fotor-bg-remover-20231106204830", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login_buttons_sign_label_speech_login_vector_fotor_bg_remover_20231017154555 {
             get {
                 object obj = ResourceManager.GetObject("login-buttons-sign-label-speech-login-vector-fotor-bg-remover-20231017154555", resourceCulture);
@@ -746,6 +756,16 @@ namespace Frontend.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MAPACHE_fotor_bg_remover_20231106204820 {
+            get {
+                object obj = ResourceManager.GetObject("MAPACHE-fotor-bg-remover-20231106204820", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap maxi {
             get {
                 object obj = ResourceManager.GetObject("maxi", resourceCulture);
@@ -799,6 +819,26 @@ namespace Frontend.Properties {
         internal static System.Drawing.Bitmap minimizar1 {
             get {
                 object obj = ResourceManager.GetObject("minimizar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OSO_fotor_bg_remover_20231106204833 {
+            get {
+                object obj = ResourceManager.GetObject("OSO-fotor-bg-remover-20231106204833", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OSOPOLAR_fotor_bg_remover_20231106204824 {
+            get {
+                object obj = ResourceManager.GetObject("OSOPOLAR-fotor-bg-remover-20231106204824", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1027,6 +1067,16 @@ namespace Frontend.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Raaton_fotor_bg_remover_20231106204936 {
+            get {
+                object obj = ResourceManager.GetObject("Raaton-fotor-bg-remover-20231106204936", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap reportes {
             get {
                 object obj = ResourceManager.GetObject("reportes", resourceCulture);
@@ -1120,6 +1170,16 @@ namespace Frontend.Properties {
         internal static System.Drawing.Bitmap venta2 {
             get {
                 object obj = ResourceManager.GetObject("venta2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Zorro_fotor_bg_remover_20231106204827 {
+            get {
+                object obj = ResourceManager.GetObject("Zorro-fotor-bg-remover-20231106204827", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

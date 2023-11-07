@@ -50,7 +50,7 @@ namespace TPPepas.Presentaciones_2.PPedidos
 
         private void FrmConsultarPedido_Load(object sender, EventArgs e)
         {
-                dgvLotes.Visible = false;
+            dgvLotes.Visible = false;
             dgvConsultarPedidos.Rows.Clear();
             foreach (Pedidos p in servicios.Pedidos.Listar())
             {
@@ -79,7 +79,7 @@ namespace TPPepas.Presentaciones_2.PPedidos
             }
             else
             {
-               
+
             }
         }
 
