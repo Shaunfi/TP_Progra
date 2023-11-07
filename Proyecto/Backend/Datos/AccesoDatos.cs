@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Data.SqlClient;
 
 namespace Backend.Datos
 {
@@ -26,19 +27,19 @@ namespace Backend.Datos
             {
                 try
                 {
-                    cnn = new SqlConnection(Properties.Resources.ConexionSTR_Euge);
+                    cnn = new SqlConnection(Properties.Resources.ConexionSTR_Jose);
                     cnn.Open();
                 }
                 catch
                 {
                     try
                     {
-                        cnn = new SqlConnection(Properties.Resources.ConexionSTR_Jose);
+                        cnn = new SqlConnection(Properties.Resources.ConexionSTR_Euge);
                         cnn.Open();
                     }
                     catch
                     {
-                        MessageBox.Show($"Quien so hippie no te conocemos en este programa. Tira la cadena vago.", "Hippie Desquiciado");
+
                     }
                 }
             }

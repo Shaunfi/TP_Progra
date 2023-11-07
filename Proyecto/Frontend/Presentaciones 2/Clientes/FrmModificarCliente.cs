@@ -1,4 +1,5 @@
-﻿using Frontend.Presentaciones_2.Avisos;
+﻿using Backend.Entidades;
+using Frontend.Presentaciones_2.Avisos;
 using System.Runtime.InteropServices;
 
 namespace Frontend.Presentaciones_2.PClientes

@@ -1,4 +1,6 @@
-﻿namespace Frontend.Presentaciones_2.Avisos
+﻿using Backend.Entidades;
+
+namespace Frontend.Presentaciones_2.Avisos
 {
     public partial class FrmSeleccionCliente : Form
     {

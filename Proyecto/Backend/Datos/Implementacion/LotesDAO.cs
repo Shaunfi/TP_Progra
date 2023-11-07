@@ -1,5 +1,6 @@
 ﻿using Backend.Datos.Interfaz;
 using Backend.Entidades;
+using System.Data.SqlClient;
 
 namespace Backend.Datos.Implementacion
 {
@@ -23,6 +24,7 @@ namespace Backend.Datos.Implementacion
                 AccesoDatosDAO.ObtenerInstancia().ProcedureNonExecuter("SP_INSERTAR_LOTES", listParam, t);
             }
         }
+
         public void ModificarStock(Pedidos pedido, SqlTransaction t)
         {
             List<SqlParameter> listParam = new List<SqlParameter>();

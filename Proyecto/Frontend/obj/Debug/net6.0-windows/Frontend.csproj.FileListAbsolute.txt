@@ -29,3 +29,35 @@ C:\Users\machi\OneDrive\Escritorio\TP-COMPARTIDO\Proyecto\Frontend\obj\Debug\net
 C:\Users\machi\OneDrive\Escritorio\TP-COMPARTIDO\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.AssemblyInfoInputs.cache
 C:\Users\machi\OneDrive\Escritorio\TP-COMPARTIDO\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.AssemblyInfo.cs
 C:\Users\machi\OneDrive\Escritorio\TP-COMPARTIDO\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.csproj.CoreCompileInputs.cache
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.csproj.AssemblyReference.cache
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.Avisos.FrmCancelar.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.Avisos.FrmError.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.Avisos.FrmExito.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.Avisos.FrmSalir.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.Avisos.FrmSalir2.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.Avisos.FrmSalir3.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.Avisos.FrmSeleccionCliente.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.Ayuda.AcercaDe.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.Ayuda.PreguntasFrecuentes.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.PClientes.FrmAgregarClientes.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.PClientes.FrmConsultarClientes.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.PClientes.FrmModificarCliente.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.Facturaciones.FrmConsultarVentas.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.Facturaciones.FrmFacturaciones.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.Facturaciones.FrmFacturacionesBusqueda.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.Facturaciones.FrmFacturacionesReceta.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.FrmPrincipal.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.Login.FrmLogin.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.Login.FrmUsuario.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.PPedidos.FrmAgregarPedidos.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.PPedidos.FrmConsultarPedido.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.PProductos.FrmAgregarProductos.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.PProductos.FrmConsultarProducto.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.PProveedores.FrmAgregarProveedor.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Presentaciones_2.PProveedores.FrmConsultarProveedor.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Properties.Resources.resources
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.csproj.GenerateResource.cache
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.AssemblyInfoInputs.cache
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.AssemblyInfo.cs
+C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.csproj.CoreCompileInputs.cache

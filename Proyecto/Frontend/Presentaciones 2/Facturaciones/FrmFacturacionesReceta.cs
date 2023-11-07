@@ -1,4 +1,6 @@
-﻿namespace Frontend.Presentaciones_2.Facturaciones
+﻿using Backend.Entidades;
+
+namespace Frontend.Presentaciones_2.Facturaciones
 {
     public partial class FrmFacturacionesReceta : Form
     {

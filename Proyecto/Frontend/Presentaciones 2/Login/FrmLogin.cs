@@ -1,5 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 using System.Diagnostics;
+using Backend.Entidades;
 
 namespace Frontend.Presentaciones_2.Login
 {

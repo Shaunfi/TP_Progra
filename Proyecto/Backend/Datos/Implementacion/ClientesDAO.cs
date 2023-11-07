@@ -1,6 +1,7 @@
 ﻿using Backend.Entidades;
 using System.Data;
 using Backend.Datos.Interfaz;
+using System.Data.SqlClient;
 
 namespace Backend.Datos.Implementacion
 {

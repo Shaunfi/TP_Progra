@@ -7,6 +7,7 @@ using Frontend.Presentaciones_2.PProveedores;
 using Frontend.Presentaciones_2.PProductos;
 using Frontend.Presentaciones_2.PPedidos;
 using Frontend.Presentaciones_2.Ayuda;
+using Backend.Entidades;
 
 namespace Frontend.Presentaciones_2
 {
