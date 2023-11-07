@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TPPepas.Datos.Interfaz;
-using TPPepas.Entidades;
+﻿using Microsoft.Data.SqlClient;
+using Backend.Datos.Interfaz;
+using Backend.Entidades;
 
-namespace TPPepas.Datos.Implementacion
+namespace Backend.Datos.Implementacion
 {
     public class LotesDAO : ILotes
     {

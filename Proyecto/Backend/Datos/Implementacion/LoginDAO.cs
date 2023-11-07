@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TPPepas.Datos.Interfaz;
+﻿using System.Data;
+using Backend.Datos.Interfaz;
+using Microsoft.Data.SqlClient;
 
-namespace TPPepas.Datos.Implementacion
+namespace Backend.Datos.Implementacion
 {
     public class LoginDAO : ILogin
     {

@@ -1,11 +1,11 @@
-﻿using Farmacia.Entidades;
+﻿using Backend.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TPPepas.Datos.Interfaz
+namespace Backend.Datos.Interfaz
 {
     public interface IClientes
     {

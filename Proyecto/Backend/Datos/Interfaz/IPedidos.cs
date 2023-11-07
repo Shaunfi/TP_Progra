@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TPPepas.Entidades;
+﻿using Backend.Entidades;
 
-namespace TPPepas.Datos.Interfaz
+namespace Backend.Datos.Interfaz
 {
     public interface IPedidos
     {

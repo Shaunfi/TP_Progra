@@ -1,15 +1,9 @@
-﻿using Farmacia.Entidades;
-using System;
-using System.Collections.Generic;
+﻿using Backend.Entidades;
 using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TPPepas.Datos.Interfaz;
-using TPPepas.Entidades;
+using Backend.Datos.Interfaz;
+using Microsoft.Data.SqlClient;
 
-namespace TPPepas.Datos.Implementacion
+namespace Backend.Datos.Implementacion
 {
     public class TablasAuxiliaresDAO : ITablasAuxiliares
     {

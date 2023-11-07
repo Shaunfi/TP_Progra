@@ -1,13 +1,14 @@
-﻿using Farmacia.Entidades;
+﻿using Backend.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TPPepas.Datos.Interfaz;
+using Backend.Datos.Interfaz;
+using Microsoft.Data.SqlClient;
 
-namespace TPPepas.Datos.Implementacion
+namespace Backend.Datos.Implementacion
 {
     public class DetallesFacturaDAO : IDetallesFactura
     {

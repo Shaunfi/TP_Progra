@@ -1,17 +1,9 @@
-﻿using Farmacia.Entidades;
-using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TPPepas.Entidades;
+﻿using Backend.Entidades;
 using System.Data;
-using TPPepas.Datos.Interfaz;
-using System.Security.Cryptography;
-using System.Security.Policy;
+using Backend.Datos.Interfaz;
+using Microsoft.Data.SqlClient;
 
-namespace TPPepas.Datos.Implementacion
+namespace Backend.Datos.Implementacion
 {
     public class PedidosDAO : IPedidos
     {

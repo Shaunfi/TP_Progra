@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TPPepas.Entidades;
+﻿using Backend.Entidades;
+using Microsoft.Data.SqlClient;
 
-namespace TPPepas.Datos.Interfaz
+namespace Backend.Datos.Interfaz
 {
     public interface ILotes
     {

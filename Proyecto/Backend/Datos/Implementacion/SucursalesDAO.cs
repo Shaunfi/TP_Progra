@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TPPepas.Datos.Interfaz;
-using TPPepas.Entidades;
-using Farmacia.Entidades;
+using Backend.Datos.Interfaz;
+using Backend.Entidades;
 
-namespace TPPepas.Datos.Implementacion
+namespace Backend.Datos.Implementacion
 {
     public class SucursalesDAO : ISucursales
     {

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TPPepas.Servicio;
+﻿using Backend.Servicio;
 
-namespace TPPepas.Factory
+namespace Backend.Factory
 {
     public abstract class FactoryAbs
     {
