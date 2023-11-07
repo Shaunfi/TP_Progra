@@ -1,4 +1,4 @@
-﻿namespace TPPepas.Presentaciones_2
+﻿namespace Frontend.Presentaciones_2
 {
     partial class FrmPrincipal
     {

@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace TPPepas.Presentaciones_2.Avisos
+﻿namespace Frontend.Presentaciones_2.Avisos
 {
     public partial class FrmSalir2 : Form
     {

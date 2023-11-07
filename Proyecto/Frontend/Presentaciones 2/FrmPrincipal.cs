@@ -1,28 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Runtime.InteropServices;
-using TPPepas.Reportes;
-using TPPepas.Presentaciones_2;
-using System.Threading;
-using TPPepas.Presentaciones_2.Facturaciones;
-using TPPepas.Presentaciones_2.Avisos;
-using TPPepas.Presentaciones_2.Login;
-using TPPepas.Presentaciones_2.PClientes;
-using TPPepas.Presentaciones_2.PProveedores;
-using TPPepas.Presentaciones_2.PProductos;
-using TPPepas.Presentaciones_2.PPedidos;
-using TPPepas.Factory;
-using Farmacia.Entidades;
-using TPPepas.Presentaciones_2.Ayuda;
+﻿using System.Runtime.InteropServices;
+using Frontend.Presentaciones_2.Facturaciones;
+using Frontend.Presentaciones_2.Avisos;
+using Frontend.Presentaciones_2.Login;
+using Frontend.Presentaciones_2.PClientes;
+using Frontend.Presentaciones_2.PProveedores;
+using Frontend.Presentaciones_2.PProductos;
+using Frontend.Presentaciones_2.PPedidos;
+using Frontend.Presentaciones_2.Ayuda;
 
-namespace TPPepas.Presentaciones_2
+namespace Frontend.Presentaciones_2
 {
     public partial class FrmPrincipal : Form
     {

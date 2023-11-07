@@ -1,4 +1,4 @@
-﻿namespace TPPepas.Presentaciones_2.Login
+﻿namespace Frontend.Presentaciones_2.Login
 {
     partial class FrmLogin
     {
@@ -74,7 +74,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::TPPepas.Properties.Resources._86906b68d2a52712a832657c52de4815_divisor_de_linea_de_borde_adornado;
+            this.pictureBox2.Image = global::Frontend.Properties.Resources._86906b68d2a52712a832657c52de4815_divisor_de_linea_de_borde_adornado;
             this.pictureBox2.Location = new System.Drawing.Point(346, 107);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(352, 10);
@@ -114,7 +114,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::TPPepas.Properties.Resources._86906b68d2a52712a832657c52de4815_divisor_de_linea_de_borde_adornado;
+            this.pictureBox3.Image = global::Frontend.Properties.Resources._86906b68d2a52712a832657c52de4815_divisor_de_linea_de_borde_adornado;
             this.pictureBox3.Location = new System.Drawing.Point(346, 163);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(352, 10);
@@ -166,7 +166,7 @@
             // btnCerrar
             // 
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = global::TPPepas.Properties.Resources.cerrar;
+            this.btnCerrar.Image = global::Frontend.Properties.Resources.cerrar;
             this.btnCerrar.Location = new System.Drawing.Point(757, 0);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(21, 22);
@@ -178,7 +178,7 @@
             // btnMinimizar
             // 
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.Image = global::TPPepas.Properties.Resources.minimazar;
+            this.btnMinimizar.Image = global::Frontend.Properties.Resources.minimazar;
             this.btnMinimizar.Location = new System.Drawing.Point(730, 0);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(21, 22);

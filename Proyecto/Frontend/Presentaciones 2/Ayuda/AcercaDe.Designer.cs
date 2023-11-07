@@ -1,6 +1,6 @@
-﻿namespace TPPepas.Presentaciones_2.Ayuda
+﻿namespace Frontend.Presentaciones_2.Ayuda
 {
-    partial class FrmAcercaDe
+    partial class AcercaDe
     {
         /// <summary>
         /// Required designer variable.

@@ -1,19 +1,6 @@
-﻿using Farmacia.Entidades;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using TPPepas.Datos.Interfaz;
-using TPPepas.Factory;
-using TPPepas.Presentaciones_2.Avisos;
-using TPPepas.Servicio;
+﻿using Frontend.Presentaciones_2.Avisos;
 
-namespace TPPepas.Presentaciones_2.Facturaciones
+namespace Frontend.Presentaciones_2.Facturaciones
 {
     public partial class FrmFacturacionesBusqueda : Form
     {

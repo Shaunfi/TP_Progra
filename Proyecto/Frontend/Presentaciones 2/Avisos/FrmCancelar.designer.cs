@@ -1,4 +1,4 @@
-﻿namespace TPPepas.Presentaciones_2.Avisos
+﻿namespace Frontend.Presentaciones_2.Avisos
 {
     partial class FrmCancelar
     {

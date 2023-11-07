@@ -1,4 +1,4 @@
-﻿namespace TPPepas.Presentaciones_2.PPedidos
+﻿namespace Frontend.Presentaciones_2.PPedidos
 {
     partial class FrmConsultarPedido
     {

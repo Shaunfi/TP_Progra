@@ -1,19 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Runtime.InteropServices;
-using TPPepas.Entidades;
-using TPPepas.Factory;
-using TPPepas.Presentaciones_2.Avisos;
-using TPPepas.Servicio;
+﻿using System.Runtime.InteropServices;
+using Frontend.Presentaciones_2.Avisos;
 
-namespace TPPepas.Presentaciones_2.PPedidos
+namespace Frontend.Presentaciones_2.PPedidos
 {
     public partial class FrmConsultarPedido : Form
     {

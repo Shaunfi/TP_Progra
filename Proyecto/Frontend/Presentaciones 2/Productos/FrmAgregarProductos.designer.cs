@@ -1,4 +1,4 @@
-﻿namespace TPPepas.Presentaciones_2.PProductos
+﻿namespace Frontend.Presentaciones_2.PProductos
 {
     partial class FrmAgregarProductos
     {

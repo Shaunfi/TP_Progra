@@ -1,13 +1,8 @@
 ﻿using Farmacia.Entidades;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TPPepas.Entidades
 {
-     public class Lotes
+    public class Lotes
     {
         private int codLote;
         private int cantidad;

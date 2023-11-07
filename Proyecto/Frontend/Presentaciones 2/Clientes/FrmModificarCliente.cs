@@ -1,20 +1,7 @@
-﻿using Farmacia.Entidades;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using TPPepas.Entidades;
-using TPPepas.Factory;
-using TPPepas.Presentaciones_2.Avisos;
-using TPPepas.Servicio;
+﻿using Frontend.Presentaciones_2.Avisos;
 using System.Runtime.InteropServices;
 
-namespace TPPepas.Presentaciones_2.PClientes
+namespace Frontend.Presentaciones_2.PClientes
 {
     public partial class FrmModificarCliente : Form
     {

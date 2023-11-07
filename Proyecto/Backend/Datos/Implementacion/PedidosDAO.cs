@@ -1,15 +1,6 @@
-﻿using Farmacia.Entidades;
-using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TPPepas.Entidades;
+﻿using TPPepas.Entidades;
 using System.Data;
 using TPPepas.Datos.Interfaz;
-using System.Security.Cryptography;
-using System.Security.Policy;
 
 namespace TPPepas.Datos.Implementacion
 {

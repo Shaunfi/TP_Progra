@@ -1,4 +1,4 @@
-﻿namespace TPPepas.Presentaciones_2.Facturaciones
+﻿namespace Frontend.Presentaciones_2.Facturaciones
 {
     partial class FrmFacturaciones
     {

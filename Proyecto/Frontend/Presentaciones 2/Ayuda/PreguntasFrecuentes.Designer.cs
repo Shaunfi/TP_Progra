@@ -1,4 +1,4 @@
-﻿namespace TPPepas.Presentaciones_2.Ayuda
+﻿namespace Frontend.Presentaciones_2.Ayuda
 {
     partial class PreguntasFrecuentes
     {

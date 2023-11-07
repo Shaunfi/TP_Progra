@@ -1,4 +1,4 @@
-﻿namespace TPPepas.Presentaciones_2.PClientes
+﻿namespace Frontend.Presentaciones_2.PClientes
 {
     partial class FrmAgregarClientes
     {

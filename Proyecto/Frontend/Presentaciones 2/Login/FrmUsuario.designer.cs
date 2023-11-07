@@ -1,4 +1,4 @@
-﻿namespace TPPepas.Presentaciones_2.Login
+﻿namespace Frontend.Presentaciones_2.Login
 {
     partial class FrmUsuario
     {

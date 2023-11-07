@@ -1,21 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using TPPepas.Presentaciones_2;
-using System.Runtime.InteropServices;
-using TPPepas.Presentaciones_2.Avisos;
-using TPPepas.Servicio;
-using TPPepas.Factory;
-using TPPepas.Entidades;
-using Farmacia.Entidades;
+﻿using System.Runtime.InteropServices;
+using Frontend.Presentaciones_2.Avisos;
 
-namespace TPPepas.Presentaciones_2.PClientes
+namespace Frontend.Presentaciones_2.PClientes
 {
     public partial class FrmAgregarClientes : Form
     {

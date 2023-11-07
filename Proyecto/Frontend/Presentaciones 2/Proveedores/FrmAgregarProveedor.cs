@@ -1,20 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Runtime.InteropServices;
-using TPPepas.Presentaciones_2.Avisos;
-using TPPepas.Servicio;
-using TPPepas.Factory;
-using Farmacia.Entidades;
-using TPPepas.Entidades;
+﻿using System.Runtime.InteropServices;
+using Frontend.Presentaciones_2.Avisos;
 
-namespace TPPepas.Presentaciones_2.PProveedores
+namespace Frontend.Presentaciones_2.PProveedores
 {
     public partial class FrmAgregarProveedor : Form
     {

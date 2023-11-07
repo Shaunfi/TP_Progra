@@ -1,4 +1,4 @@
-﻿namespace TPPepas.Presentaciones_2.PProveedores
+﻿namespace Frontend.Presentaciones_2.PProveedores
 {
     partial class FrmConsultarProveedor
     {

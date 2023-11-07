@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TPPepas.Datos.Implementacion;
+﻿using TPPepas.Datos.Implementacion;
 using TPPepas.Datos.Interfaz;
 
 namespace TPPepas.Servicio
