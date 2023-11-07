@@ -437,24 +437,40 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\joseg\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+=======
+    "C:\\Users\\Rami\\.nuget\\packages\\": {}
+>>>>>>> fcad98686c3f9488ee4943b6662e3ae37574364a
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\joseg\\OneDrive\\Documentos\\UTN Cba\\TP II\\ProyectoTP\\TP_Progra\\Proyecto\\APIFarmacia\\APIFarmacia.csproj",
       "projectName": "APIFarmacia",
       "projectPath": "C:\\Users\\joseg\\OneDrive\\Documentos\\UTN Cba\\TP II\\ProyectoTP\\TP_Progra\\Proyecto\\APIFarmacia\\APIFarmacia.csproj",
       "packagesPath": "C:\\Users\\joseg\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\joseg\\OneDrive\\Documentos\\UTN Cba\\TP II\\ProyectoTP\\TP_Progra\\Proyecto\\APIFarmacia\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\Rami\\Desktop\\Proyectos\\TP DE MIERDA\\TP_Progra\\Proyecto\\APIFarmacia\\APIFarmacia.csproj",
+      "projectName": "APIFarmacia",
+      "projectPath": "C:\\Users\\Rami\\Desktop\\Proyectos\\TP DE MIERDA\\TP_Progra\\Proyecto\\APIFarmacia\\APIFarmacia.csproj",
+      "packagesPath": "C:\\Users\\Rami\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rami\\Desktop\\Proyectos\\TP DE MIERDA\\TP_Progra\\Proyecto\\APIFarmacia\\obj\\",
+>>>>>>> fcad98686c3f9488ee4943b6662e3ae37574364a
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\joseg\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+=======
+        "C:\\Users\\Rami\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> fcad98686c3f9488ee4943b6662e3ae37574364a
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

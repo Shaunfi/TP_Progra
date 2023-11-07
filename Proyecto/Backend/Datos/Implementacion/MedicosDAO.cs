@@ -1,7 +1,11 @@
 ﻿using System.Data;
+<<<<<<< HEAD
 using TPPepas.Datos.Interfaz;
+=======
+using Backend.Datos.Interfaz;
+>>>>>>> fcad98686c3f9488ee4943b6662e3ae37574364a
 
-namespace TPPepas.Datos.Implementacion
+namespace Backend.Datos.Implementacion
 {
     public class MedicosDAO : IMedicos
     {

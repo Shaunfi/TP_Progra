@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 ﻿using TPPepas.Entidades;
 using System.Data;
 using TPPepas.Datos.Interfaz;
+=======
+﻿using Backend.Entidades;
+using System.Data;
+using Backend.Datos.Interfaz;
+using Microsoft.Data.SqlClient;
+>>>>>>> fcad98686c3f9488ee4943b6662e3ae37574364a
 
-namespace TPPepas.Datos.Implementacion
+namespace Backend.Datos.Implementacion
 {
     public class PedidosDAO : IPedidos
     {

@@ -1,6 +1,17 @@
+<<<<<<< HEAD
 ﻿using System.Data;
+=======
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data.SqlTypes;
+using Microsoft.Data.SqlClient;
+>>>>>>> fcad98686c3f9488ee4943b6662e3ae37574364a
 
-namespace TPPepas.Datos
+namespace Backend.Datos
 {
     public class AccesoDatosDAO
     {

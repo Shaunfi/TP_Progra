@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 ﻿using TPPepas.Datos.Interfaz;
 using TPPepas.Entidades;
+=======
+﻿using Microsoft.Data.SqlClient;
+using Backend.Datos.Interfaz;
+using Backend.Entidades;
+>>>>>>> fcad98686c3f9488ee4943b6662e3ae37574364a
 
-namespace TPPepas.Datos.Implementacion
+namespace Backend.Datos.Implementacion
 {
     public class LotesDAO : ILotes
     {

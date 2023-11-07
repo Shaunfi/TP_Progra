@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 ﻿using TPPepas.Datos.Implementacion;
 using TPPepas.Datos.Interfaz;
+=======
+﻿using Backend.Datos.Implementacion;
+using Backend.Datos.Interfaz;
+>>>>>>> fcad98686c3f9488ee4943b6662e3ae37574364a
 
-namespace TPPepas.Servicio
+namespace Backend.Servicio
 {
     public class Servicios : IServicios
     {
