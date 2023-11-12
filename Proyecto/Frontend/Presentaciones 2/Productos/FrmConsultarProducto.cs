@@ -1,6 +1,10 @@
 ﻿using System.Runtime.InteropServices;
 using Backend.Entidades;
+using Backend.Factory;
+using Backend.Servicio;
+using Frontend.Client;
 using Frontend.Presentaciones_2.Avisos;
+using Newtonsoft.Json;
 
 namespace Frontend.Presentaciones_2.PProductos
 {
@@ -18,13 +22,46 @@ namespace Frontend.Presentaciones_2.PProductos
         private void FrmConsultarProducto_Load(object sender, EventArgs e)
         {
             CargarComboBox(cboTipoProductos, "valor", "display", servicios.TablasAuxiliares.ListarTiposProductos());
-            CargarDataGridView(servicios.Productos.Listar());
+            // CargarDataGridView(servicios.Productos.Listar());
+            CargarProductos(); // este usa la api
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
+
+        // trabajando con la api
+
+        private async void CargarProductos()
+        {
+            string url = "http://localhost:10932/productos";
+            // string url = string.Format("http://localhost:");
+
+            var result = await ClientSingleton.GetInstance().GetAsync(url);
+            var list = JsonConvert.DeserializeObject<List<Productos>>(result);
+
+
+            dgvConsultarProductos.Rows.Clear();
+            if (list != null)
+            {
+                foreach (Productos p in list)
+                {
+                    dgvConsultarProductos.Rows.Add(p,
+                                               p.Descripcion,
+                                               p.Precio,
+                                               p.VentaLibre,
+                                               servicios.TablasAuxiliares.ConsultarTipoProductos(p.TipoProducto),
+                                               servicios.Laboratorios.Consultar(p.Laboratorio.CodLaboratorio),
+                                               "Consultar Stock",
+                                               "Deshabilitar");
+                }
+            }
+        }
+
+
+
 
         private void btnSalir2_Click(object sender, EventArgs e)
         {

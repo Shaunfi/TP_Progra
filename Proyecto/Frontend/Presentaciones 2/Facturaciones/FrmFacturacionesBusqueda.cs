@@ -1,4 +1,5 @@
 ﻿using Backend.Entidades;
+using Backend.Servicio;
 using Frontend.Presentaciones_2.Avisos;
 
 namespace Frontend.Presentaciones_2.Facturaciones

@@ -1,10 +1,11 @@
-﻿using Frontend.Presentaciones_2.Avisos;
+﻿using Backend.Factory;
+using Frontend.Presentaciones_2.Avisos;
 
 namespace Frontend.Presentaciones_2.Ayuda
 {
     public partial class AcercaDe : Form
     {
-        public AcercaDe()
+        public AcercaDe(FactoryAbs fabrica)
         {
             InitializeComponent();
         }

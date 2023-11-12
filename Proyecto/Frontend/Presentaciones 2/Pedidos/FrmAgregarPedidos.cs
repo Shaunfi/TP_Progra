@@ -1,5 +1,7 @@
 ﻿using System.Runtime.InteropServices;
 using Backend.Entidades;
+using Backend.Factory;
+using Backend.Servicio;
 using Frontend.Presentaciones_2.Avisos;
 
 namespace Frontend.Presentaciones_2.PPedidos

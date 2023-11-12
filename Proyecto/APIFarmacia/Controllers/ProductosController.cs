@@ -18,14 +18,24 @@ namespace APIFarmacia.Controllers
         public ProductosController()
         {
             // ver como llamo a la fabrica desde aca
-            servicio = new FactoryAbs().CrearServicio();
+            servicio = new FactoryImp().CrearServicio();
         }
 
         // GET: api/<ProductosController>
         [HttpGet]
-        public List<object> Get()
+        public IActionResult Get()
         {
-            return servicio.Productos.Listar();
+            List<object> list = null;
+            try
+            {
+                list = servicio.Productos.Listar();
+                return Ok(list);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
         }
 
         //// GET api/<ProductosController>/5

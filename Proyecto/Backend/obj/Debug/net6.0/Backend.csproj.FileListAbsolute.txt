@@ -12,3 +12,17 @@ C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Backend\obj\Debu
 C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Backend\obj\Debug\net6.0\refint\Backend.dll
 C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Backend\obj\Debug\net6.0\Backend.pdb
 C:\Users\Rami\Desktop\Proyectos\TP DE MIERDA\TP_Progra\Proyecto\Backend\obj\Debug\net6.0\ref\Backend.dll
+C:\Users\joseg\OneDrive\Documentos\UTN Cba\TP II\ProyectoTP\TP_Progra\Proyecto\Backend\bin\Debug\net6.0\Backend.deps.json
+C:\Users\joseg\OneDrive\Documentos\UTN Cba\TP II\ProyectoTP\TP_Progra\Proyecto\Backend\bin\Debug\net6.0\Backend.dll
+C:\Users\joseg\OneDrive\Documentos\UTN Cba\TP II\ProyectoTP\TP_Progra\Proyecto\Backend\bin\Debug\net6.0\Backend.pdb
+C:\Users\joseg\OneDrive\Documentos\UTN Cba\TP II\ProyectoTP\TP_Progra\Proyecto\Backend\obj\Debug\net6.0\Backend.csproj.AssemblyReference.cache
+C:\Users\joseg\OneDrive\Documentos\UTN Cba\TP II\ProyectoTP\TP_Progra\Proyecto\Backend\obj\Debug\net6.0\Backend.Properties.Resources.resources
+C:\Users\joseg\OneDrive\Documentos\UTN Cba\TP II\ProyectoTP\TP_Progra\Proyecto\Backend\obj\Debug\net6.0\Backend.csproj.GenerateResource.cache
+C:\Users\joseg\OneDrive\Documentos\UTN Cba\TP II\ProyectoTP\TP_Progra\Proyecto\Backend\obj\Debug\net6.0\Backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joseg\OneDrive\Documentos\UTN Cba\TP II\ProyectoTP\TP_Progra\Proyecto\Backend\obj\Debug\net6.0\Backend.AssemblyInfoInputs.cache
+C:\Users\joseg\OneDrive\Documentos\UTN Cba\TP II\ProyectoTP\TP_Progra\Proyecto\Backend\obj\Debug\net6.0\Backend.AssemblyInfo.cs
+C:\Users\joseg\OneDrive\Documentos\UTN Cba\TP II\ProyectoTP\TP_Progra\Proyecto\Backend\obj\Debug\net6.0\Backend.csproj.CoreCompileInputs.cache
+C:\Users\joseg\OneDrive\Documentos\UTN Cba\TP II\ProyectoTP\TP_Progra\Proyecto\Backend\obj\Debug\net6.0\Backend.dll
+C:\Users\joseg\OneDrive\Documentos\UTN Cba\TP II\ProyectoTP\TP_Progra\Proyecto\Backend\obj\Debug\net6.0\refint\Backend.dll
+C:\Users\joseg\OneDrive\Documentos\UTN Cba\TP II\ProyectoTP\TP_Progra\Proyecto\Backend\obj\Debug\net6.0\Backend.pdb
+C:\Users\joseg\OneDrive\Documentos\UTN Cba\TP II\ProyectoTP\TP_Progra\Proyecto\Backend\obj\Debug\net6.0\ref\Backend.dll
