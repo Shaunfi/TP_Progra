@@ -36,7 +36,7 @@ namespace Frontend.Presentaciones_2.PProductos
 
         private async void CargarProductos()
         {
-            string url = "http://localhost:10932/productos";
+            string url = "http://localhost:7265/api/Productos";
             // string url = string.Format("http://localhost:");
 
             var result = await ClientSingleton.GetInstance().GetAsync(url);
@@ -60,6 +60,15 @@ namespace Frontend.Presentaciones_2.PProductos
             }
         }
 
+        private async Task CargarComboAsync()
+        {
+            string url = "";
+            var data = await ClientSingleton.GetInstance().GetAsync(url);
+            List<Productos> list = JsonConvert.DeserializeObject<List<Productos>>(data);
+            cboTipoProductos.DataSource = list;
+            cboTipoProductos.ValueMember = "valor";
+            cboTipoProductos.DisplayMember = "display";
+        }
 
 
 

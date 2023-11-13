@@ -285,7 +285,6 @@
             this.Name = "FrmConsultarProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmConsultarProducto";
-            this.Load += new System.EventHandler(this.FrmConsultarProducto_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmConsultarProducto_MouseDown);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

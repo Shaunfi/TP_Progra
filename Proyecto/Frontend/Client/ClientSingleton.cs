@@ -52,5 +52,17 @@ namespace Frontend.Client
             }
             return response;
         }
+
+        // DELETE
+        public async Task<string> DeleteAsync(string url)
+        {
+            var result = await client.DeleteAsync(url);
+            var content = "";
+            if (result.IsSuccessStatusCode)
+            {
+                content = await result.Content.ReadAsStringAsync();
+            }
+            return content;
+        }
     }
 }

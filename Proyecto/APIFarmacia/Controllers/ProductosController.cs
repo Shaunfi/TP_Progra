@@ -25,7 +25,7 @@ namespace APIFarmacia.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            List<object> list = null;
+            List<object> list = new List<object>();
             try
             {
                 list = servicio.Productos.Listar();
