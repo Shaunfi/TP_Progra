@@ -17,7 +17,6 @@ namespace APIFarmacia.Controllers
         // agregar constructor que cree el servicio
         public ProductosController()
         {
-            // ver como llamo a la fabrica desde aca
             servicio = new FactoryImp().CrearServicio();
         }
 

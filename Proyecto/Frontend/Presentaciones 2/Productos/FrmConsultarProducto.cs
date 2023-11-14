@@ -19,29 +19,11 @@ namespace Frontend.Presentaciones_2.PProductos
             servicios = fabrica.CrearServicio();
             this.sucursal = sucursal;
         }
-        private void FrmConsultarProducto_Load(object sender, EventArgs e)
+        private async void FrmConsultarProducto_Load_1Async(object sender, EventArgs e)
         {
             CargarComboBox(cboTipoProductos, "valor", "display", servicios.TablasAuxiliares.ListarTiposProductos());
             // CargarDataGridView(servicios.Productos.Listar());
-            CargarProductos(); // este usa la api
-        }
-
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
-
-        // trabajando con la api
-
-        private async void CargarProductos()
-        {
-            string url = "http://localhost:7265/api/Productos";
-            // string url = string.Format("http://localhost:");
-
-            var result = await ClientSingleton.GetInstance().GetAsync(url);
-            var list = JsonConvert.DeserializeObject<List<Productos>>(result);
-
+            List<Productos> list = await CargarProductos(); // este usa la api
 
             dgvConsultarProductos.Rows.Clear();
             if (list != null)
@@ -58,8 +40,43 @@ namespace Frontend.Presentaciones_2.PProductos
                                                "Deshabilitar");
                 }
             }
+
+
         }
 
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
+
+        // trabajando con la api
+
+        private async Task<List<Productos>> CargarProductos()
+        {
+            string url = "http://localhost:7265/api/Productos";
+            var result = await ClientSingleton.GetInstance().GetAsync(url);
+            var list = JsonConvert.DeserializeObject<List<Productos>>(result);
+            return list;
+
+            //dgvConsultarProductos.Rows.Clear();
+            //if (list != null)
+            //{
+            //    foreach (Productos p in list)
+            //    {
+            //        dgvConsultarProductos.Rows.Add(p,
+            //                                   p.Descripcion,
+            //                                   p.Precio,
+            //                                   p.VentaLibre,
+            //                                   servicios.TablasAuxiliares.ConsultarTipoProductos(p.TipoProducto),
+            //                                   servicios.Laboratorios.Consultar(p.Laboratorio.CodLaboratorio),
+            //                                   "Consultar Stock",
+            //                                   "Deshabilitar");
+            //    }
+            //}
+        }
+
+        // cargar combo desde la api
         private async Task CargarComboAsync()
         {
             string url = "";
@@ -169,5 +186,6 @@ namespace Frontend.Presentaciones_2.PProductos
         {
             dgvConsultarProductos.Rows.Clear();
         }
+
     }
 }

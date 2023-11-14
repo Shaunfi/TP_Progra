@@ -1,4 +1,6 @@
 ﻿using Backend.Entidades;
+using Backend.Factory;
+using Backend.Servicio;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -9,14 +11,31 @@ namespace APIFarmacia.Controllers
     [ApiController]
     public class ClientesController : ControllerBase
     {
+        private IServicios servicio;
         private static List<Clientes> lClientes = new List<Clientes>();
+
+
+        // agregar constructor que cree el servicio
+        public ClientesController()
+        {
+            servicio = new FactoryImp().CrearServicio();
+        }
+
 
         // GET: api/<ClientesController>
         [HttpGet]
         public IActionResult Get()
         {
-
-            return Ok(lClientes);
+            List<object> list = new List<object>();
+            try
+            {
+                list = servicio.Clientes.Listar();
+                return Ok(list);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         //// GET api/<ClientesController>/5
