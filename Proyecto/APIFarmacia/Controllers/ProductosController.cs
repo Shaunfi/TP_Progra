@@ -37,8 +37,8 @@ namespace APIFarmacia.Controllers
 
         }
 
-        // POST api/<ProductosController>
-        [HttpPost("filtro")]
+        // GET api/<ProductosController>
+        [HttpGet("filtro")]
         public IActionResult GetFiltro(string descripcion, int tipoProducto)
         {
             

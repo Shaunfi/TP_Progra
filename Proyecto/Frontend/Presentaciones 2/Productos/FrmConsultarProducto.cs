@@ -144,15 +144,8 @@ namespace Frontend.Presentaciones_2.PProductos
 
         private async void CargarProductosFiltro(string fDescripcion, int tipoProd)
         {
-            // falta ver como pasar los dos parametros, no esta funcioando asi
-            List<object> lista = new List<object>();
-            lista.Add(fDescripcion);
-            lista.Add(tipoProd);
-            string filtro = JsonConvert.SerializeObject(lista);
-            
-            string url = "https://localhost:7265/api/Productos/filtro";
-
-            var result = await ClientSingleton.GetInstance().PostAsync(url, filtro);
+            string url = $"https://localhost:7265/api/Productos/filtro?descripcion={fDescripcion}&tipoProducto={tipoProd}";
+            var result = await ClientSingleton.GetInstance().GetAsync(url);
             var list = JsonConvert.DeserializeObject<List<Productos>>(result);
 
             dgvConsultarProductos.Rows.Clear();
