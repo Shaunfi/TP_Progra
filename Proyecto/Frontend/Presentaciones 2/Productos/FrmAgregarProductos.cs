@@ -2,7 +2,9 @@
 using Backend.Entidades;
 using Backend.Factory;
 using Backend.Servicio;
+using Frontend.Client;
 using Frontend.Presentaciones_2.Avisos;
+using Newtonsoft.Json;
 
 namespace Frontend.Presentaciones_2.PProductos
 {
@@ -106,20 +108,34 @@ namespace Frontend.Presentaciones_2.PProductos
                 nuevoProducto.StockMinimo = Convert.ToInt32(nudStockMin.Value);
                 nuevoProducto.VentaLibre = checkBoxVentaLibre.Checked;
 
-                if (servicios.Productos.Agregar(nuevoProducto))
-                {
-                    MessageBox.Show("Producto agregado !!");
-                    LimpiarForm();
-                }
-                else
-                {
-                    MessageBox.Show("El producto no pudo ser agregado.");
-                }
+
+                CargarProductoAsync(nuevoProducto);
             }
             else
             {
                 lblAviso.Visible = true;
             }
+        }
+
+        // metodo para hacer un post de un producto
+        private async void CargarProductoAsync(Productos prod)
+        {
+            string url = $"https://localhost:7265/api/Productos";
+            string bodyContent = JsonConvert.SerializeObject(prod);
+
+            var result = await ClientSingleton.GetInstance().PostAsync(url, bodyContent);
+
+            if (result.Equals("true"))
+            {
+                MessageBox.Show("Producto registrado", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("ERROR. No se pudo registrar el producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
         }
     }
 }

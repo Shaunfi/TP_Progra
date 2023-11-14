@@ -81,12 +81,18 @@ namespace APIFarmacia.Controllers
         [HttpPost]
         public IActionResult Post(Productos dto)
         {
-            if (dto != null)
+            try
             {
-                bool result = servicio.Productos.Agregar(dto);
-                return Ok("Se registro el producto exitosamente!");
+                if (dto == null)
+                {
+                    return BadRequest("Debes pasar el producto");
+                }
+                return Ok(servicio.Productos.Agregar(dto));
             }
-            return BadRequest("Debes pasar el producto");
+            catch
+            {
+                return BadRequest("No se pudo registrar, error");
+            }
         }
 
         //// PUT api/<ProductosController>/5
