@@ -54,12 +54,28 @@ namespace APIFarmacia.Controllers
 
         }
 
-        //// GET api/<ProductosController>/5
-        //[HttpGet("{id}")]
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
+        // GET api/<ProductosController>/5
+        [HttpGet("{id}")]
+        public IActionResult Get(int id)
+        {
+            try
+            {
+                // ver porque esta funcion devuelve un string
+                string prod = servicio.Productos.ConsultarProducto(id);
+                if(prod != null)
+                {
+                    return Ok(prod);
+                }
+                else
+                {
+                    return NotFound("No se encontro el producto con id " + id);
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
 
         // POST api/<ProductosController>
         [HttpPost]

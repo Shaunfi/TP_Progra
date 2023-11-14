@@ -38,23 +38,42 @@ namespace APIFarmacia.Controllers
             }
         }
 
-        //// GET api/<ClientesController>/5
-        //[HttpGet("{id}")]
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
+
+
+        // GET api/<ClientesController>/nombre
+        [HttpGet("{nombre}")]
+        public IActionResult Get(string nombre)
+        {
+            try
+            {
+                if(nombre == null)
+                {
+                    return BadRequest("Debes pasar un nombre");
+                }
+                return Ok(servicio.Clientes.ListarFiltro(nombre));
+            }
+            catch(Exception ex)
+            {
+                return BadRequest("No se encontraron clientes");
+            }
+        }
 
         // POST api/<ClientesController>
         [HttpPost]
-        public IActionResult Post(Clientes dto)
+        public IActionResult Post(Clientes cli)
         {
-            if(dto != null)
+            try
             {
-                return BadRequest();
+                if(cli == null)
+                {
+                    return BadRequest("Debes pasar un cliente");
+                }
+                return Ok(servicio.Clientes.Agregar(cli));
             }
-            lClientes.Add(dto);
-            return Ok("Se registro el cliente exitosamente!");
+            catch(Exception ex)
+            {
+                return StatusCode(500, "Error interno! Intente luego . " + ex.Message);
+            }
         }
 
         //// PUT api/<ClientesController>/5
