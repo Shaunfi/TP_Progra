@@ -20,14 +20,14 @@ namespace Backend.Datos
         {
             try
             {
-                cnn = new SqlConnection(Properties.Resources.ConexionSTR_Rami);
+                cnn = new SqlConnection(Properties.Resources.ConexionSTR_Jose);
                 cnn.Open();
             }
             catch
             {
                 try
                 {
-                    cnn = new SqlConnection(Properties.Resources.ConexionSTR_Jose);
+                    cnn = new SqlConnection(Properties.Resources.ConexionSTR_Rami);
                     cnn.Open();
                 }
                 catch
