@@ -76,8 +76,6 @@ namespace Frontend.Presentaciones_2.PClientes
             {
                 ListarClientes(nombre);
             }
-
-            // ver si la consulta es unicamente por nombre, unicamente por numero o ambas
         }
 
         private async void ListarClientes()
