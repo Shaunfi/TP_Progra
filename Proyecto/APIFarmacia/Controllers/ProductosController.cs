@@ -77,6 +77,29 @@ namespace APIFarmacia.Controllers
             }
         }
 
+        // GET api/<ProductosController>/deshabilitar/5
+        [HttpGet("deshabilitar/{id}")]
+        public IActionResult Eliminar(int id)
+        {
+            try
+            {
+                // ver porque esta funcion devuelve un string
+                bool result = servicio.Productos.DeshabilitarProducto(id);
+                if (result == true)
+                {
+                    return Ok(result);
+                }
+                else
+                {
+                    return NotFound("No se encontro el producto con id " + id);
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         // POST api/<ProductosController>
         [HttpPost]
         public IActionResult Post(Productos dto)

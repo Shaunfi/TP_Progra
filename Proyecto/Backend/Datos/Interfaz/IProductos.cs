@@ -9,7 +9,7 @@ namespace Backend.Datos.Interfaz
         List<object> ListarFiltro(int tipoProducto);
         List<object> ListarFiltro(string descripcion, int tipoProducto);
         double ConsultarDescuento(Productos producto, Clientes cliente);
-        bool DeshabilitarProducto(Productos producto);
+        bool DeshabilitarProducto(int codProducto);
         string ConsultarProducto(int codProducto);
         int ConsultarStock(int codProducto, int codSucursal);
     }

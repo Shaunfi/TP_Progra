@@ -119,9 +119,9 @@ namespace Backend.Datos.Implementacion
             return Convert.ToDouble(outParam.Value);
         }
 
-        public bool DeshabilitarProducto(Productos producto)
+        public bool DeshabilitarProducto(int codProducto)
         {
-            SqlParameter param = new SqlParameter("@id", producto.CodProducto);
+            SqlParameter param = new SqlParameter("@id", codProducto);
 
             return AccesoDatosDAO.ObtenerInstancia().ProcedureNonExecuter("SP_DESHABILITAR_PRODUCTO", param);
         }

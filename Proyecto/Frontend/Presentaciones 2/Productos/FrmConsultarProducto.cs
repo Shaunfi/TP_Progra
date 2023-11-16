@@ -165,7 +165,14 @@ namespace Frontend.Presentaciones_2.PProductos
             }
         }
 
-        private void dgvConsultarProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async Task DeshabilitarProducto(int id)
+        {
+            string url = $"https://localhost:7265/api/Productos/deshabilitar/{id}";
+            var result = await ClientSingleton.GetInstance().GetAsync(url);
+            // return JsonConvert.DeserializeObject<bool>(result);
+        }
+
+        private async void dgvConsultarProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvConsultarProductos.CurrentCell.ColumnIndex == 6)
             {
@@ -177,17 +184,20 @@ namespace Frontend.Presentaciones_2.PProductos
             else if (dgvConsultarProductos.CurrentCell.ColumnIndex == 7)
             {
                 Productos producto = (Productos)dgvConsultarProductos.CurrentRow.Cells[0].Value;
-                if (servicios.Productos.DeshabilitarProducto(producto))
-                {
-                    MessageBox.Show("Producto deshabilitado con exito.");
-                    dgvConsultarProductos.Rows.RemoveAt(dgvConsultarProductos.CurrentRow.Index);
-                }
-                else
-                {
-                    MessageBox.Show("El producto no se pudo deshabilitar.");
-                }
+                await DeshabilitarProducto(producto.CodProducto);
+                MessageBox.Show("Producto deshabilitado con exito.");
+                //if (DeshabilitarProducto(producto.CodProducto))
+                //{
+                //    MessageBox.Show("Producto deshabilitado con exito.");
+                //    dgvConsultarProductos.Rows.RemoveAt(dgvConsultarProductos.CurrentRow.Index);
+                //}
+                //else
+                //{
+                //    MessageBox.Show("El producto no se pudo deshabilitar.");
+                //}
             }
         }
+
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
