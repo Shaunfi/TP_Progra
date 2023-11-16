@@ -161,21 +161,32 @@ namespace Frontend.Presentaciones_2.PClientes
                 nuevoCliente.TipoDoc = Convert.ToInt32(cboTipodoc.SelectedValue);
                 nuevoCliente.CodMutual = Convert.ToInt32(cboMutual.SelectedValue);
 
-                if (servicios.Clientes.Agregar(nuevoCliente))
-                {
-                    MessageBox.Show("Se agrego.");
-                }
-                else
-                {
-                    MessageBox.Show("No se agrego.");
-
-                }
+                CargarClienteAsync(nuevoCliente);
             }
             else
             {
                 lblAviso.Visible = true;
             }
 
+        }
+
+        // metodo para hacer un post de un cliente
+        private async void CargarClienteAsync(Clientes cliente)
+        {
+            string url = $"https://localhost:7265/api/Clientes";
+            string bodyContent = JsonConvert.SerializeObject(cliente);
+
+            var result = await ClientSingleton.GetInstance().PostAsync(url, bodyContent);
+
+            if (result.Equals("true"))
+            {
+                MessageBox.Show("Cliente registrado", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("ERROR. No se pudo registrar el cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void cboCiudades_SelectedIndexChanged(object sender, EventArgs e)

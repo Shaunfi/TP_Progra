@@ -160,7 +160,7 @@ namespace Frontend.Presentaciones_2.PProductos
                                                servicios.TablasAuxiliares.ConsultarTipoProductos(p.TipoProducto),
                                                servicios.Laboratorios.Consultar(p.Laboratorio.CodLaboratorio),
                                                "Consultar Stock",
-                                               "Deshabilitar");
+                                               p.Activo ? "Deshabilitar" : "Habilitar");
                 }
             }
         }
@@ -184,8 +184,17 @@ namespace Frontend.Presentaciones_2.PProductos
             else if (dgvConsultarProductos.CurrentCell.ColumnIndex == 7)
             {
                 Productos producto = (Productos)dgvConsultarProductos.CurrentRow.Cells[0].Value;
-                await DeshabilitarProducto(producto.CodProducto);
-                MessageBox.Show("Producto deshabilitado con exito.");
+                if (producto.Activo)
+                {
+                    await DeshabilitarProducto(producto.CodProducto);
+                    MessageBox.Show("Producto deshabilitado con exito.");
+                }
+                else
+                {
+                    await DeshabilitarProducto(producto.CodProducto);
+                    MessageBox.Show("Producto habilitado con exito.");
+                }
+
                 //if (DeshabilitarProducto(producto.CodProducto))
                 //{
                 //    MessageBox.Show("Producto deshabilitado con exito.");

@@ -2,7 +2,9 @@
 using Backend.Entidades;
 using Backend.Factory;
 using Backend.Servicio;
+using Frontend.Client;
 using Frontend.Presentaciones_2.Avisos;
+using Newtonsoft.Json;
 
 namespace Frontend.Presentaciones_2.PClientes
 {
@@ -35,6 +37,7 @@ namespace Frontend.Presentaciones_2.PClientes
         {
             txtCliente.Text = "";
             txtClienteNumero.Text = "";
+            ListarClientes();
         }
 
         private void FrmConsultarClientes_MouseDown(object sender, MouseEventArgs e)
@@ -67,20 +70,60 @@ namespace Frontend.Presentaciones_2.PClientes
             }
             if (nroDoc > 0)
             {
-                foreach (Clientes c in servicios.Clientes.ListarFiltro(nombre, nroDoc))
-                {
-                    dgvConsultarCliente.Rows.Add(new object[] {c, c.CodCliente, c.Nombre, c.Apellido, c.NroDoc, c.CodMutual, c.NroAfliliado, "modificar" });
-                }
+                ListarClientes(nombre, nroDoc);
             }
             else
             {
-                foreach (Clientes c in servicios.Clientes.ListarFiltro(nombre))
-                {
-                    dgvConsultarCliente.Rows.Add(new object[] {c, c.CodCliente, c.Nombre, c.Apellido, c.NroDoc, c.CodMutual, c.NroAfliliado, "modificar" });
-                }
+                ListarClientes(nombre);
             }
 
             // ver si la consulta es unicamente por nombre, unicamente por numero o ambas
+        }
+
+        private async void ListarClientes()
+        {
+            string url = $"https://localhost:7265/api/Clientes/Consultar";
+            var result = await ClientSingleton.GetInstance().GetAsync(url);
+            var list = JsonConvert.DeserializeObject<List<Clientes>>(result);
+
+            dgvConsultarCliente.Rows.Clear();
+            if (list != null)
+            {
+                foreach (Clientes c in list)
+                {
+                    dgvConsultarCliente.Rows.Add(new object[] { c, c.CodCliente, c.Nombre, c.Apellido, c.NroDoc, c.CodMutual, c.NroAfliliado, "modificar" });
+                }
+            }
+        }
+        private async void ListarClientes(string nombre)
+        {
+            string url = $"https://localhost:7265/api/Clientes/Consultar?nombre={nombre}";
+            var result = await ClientSingleton.GetInstance().GetAsync(url);
+            var list = JsonConvert.DeserializeObject<List<Clientes>>(result);
+
+            dgvConsultarCliente.Rows.Clear();
+            if (list != null)
+            {
+                foreach (Clientes c in list)
+                {
+                    dgvConsultarCliente.Rows.Add(new object[] { c, c.CodCliente, c.Nombre, c.Apellido, c.NroDoc, c.CodMutual, c.NroAfliliado, "modificar" });
+                }
+            }
+        }
+        private async void ListarClientes(string nombre, int nroDoc)
+        {
+            string url = $"https://localhost:7265/api/Clientes/Consultar?nombre={nombre}&nroDoc={nroDoc}";
+            var result = await ClientSingleton.GetInstance().GetAsync(url);
+            var list = JsonConvert.DeserializeObject<List<Clientes>>(result);
+
+            dgvConsultarCliente.Rows.Clear();
+            if (list != null)
+            {
+                foreach (Clientes c in list)
+                {
+                    dgvConsultarCliente.Rows.Add(new object[] { c, c.CodCliente, c.Nombre, c.Apellido, c.NroDoc, c.CodMutual, c.NroAfliliado, "modificar" });
+                }
+            }
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

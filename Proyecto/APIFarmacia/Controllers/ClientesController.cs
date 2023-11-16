@@ -23,7 +23,7 @@ namespace APIFarmacia.Controllers
 
 
         // GET: api/<ClientesController>
-        [HttpGet]
+        [HttpGet("Consultar")]
         public IActionResult Get()
         {
             List<object> list = new List<object>();
@@ -41,7 +41,7 @@ namespace APIFarmacia.Controllers
 
 
         // GET api/<ClientesController>/nombre
-        [HttpGet("{nombre}")]
+        [HttpGet("Consultar/{nombre}")]
         public IActionResult Get(string nombre)
         {
             try
@@ -53,6 +53,24 @@ namespace APIFarmacia.Controllers
                 return Ok(servicio.Clientes.ListarFiltro(nombre));
             }
             catch(Exception ex)
+            {
+                return BadRequest("No se encontraron clientes");
+            }
+        }
+
+        // GET api/<ClientesController>/nombre
+        [HttpGet("Consultar/{nombre}/{nroDoc}")]
+        public IActionResult Get(string nombre, int nroDoc)
+        {
+            try
+            {
+                if (nombre != null && nroDoc > 0)
+                {
+                    return Ok(servicio.Clientes.ListarFiltro(nombre, nroDoc));
+                }
+                return BadRequest("Debes pasar un nombre");
+            }
+            catch (Exception ex)
             {
                 return BadRequest("No se encontraron clientes");
             }
@@ -76,11 +94,23 @@ namespace APIFarmacia.Controllers
             }
         }
 
-        //// PUT api/<ClientesController>/5
-        //[HttpPut("{id}")]
-        //public void Put(int id, [FromBody] string value)
-        //{
-        //}
+        // PUT api/<ClientesController>/5
+        [HttpPut("modificar")]
+        public IActionResult Put([FromBody] Clientes cliente)
+        {
+            try
+            {
+                if (cliente == null)
+                {
+                    return BadRequest("Debes pasar un cliente para modificar");
+                }
+                return Ok(servicio.Clientes.Modificar(cliente));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Error interno! Intente luego . " + ex.Message);
+            }
+        }
 
         //// DELETE api/<ClientesController>/5
         //[HttpDelete("{id}")]

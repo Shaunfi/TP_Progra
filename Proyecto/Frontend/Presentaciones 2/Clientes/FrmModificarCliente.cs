@@ -1,6 +1,8 @@
 ﻿using Backend.Entidades;
 using Backend.Servicio;
+using Frontend.Client;
 using Frontend.Presentaciones_2.Avisos;
+using Newtonsoft.Json;
 using System.Runtime.InteropServices;
 
 namespace Frontend.Presentaciones_2.PClientes
@@ -111,19 +113,30 @@ namespace Frontend.Presentaciones_2.PClientes
                 cliente.TipoDoc = Convert.ToInt32(cboTipodoc.SelectedValue);
                 cliente.CodMutual = Convert.ToInt32(cboMutual.SelectedValue);
 
-                if (servicios.Clientes.Modificar(cliente))
-                {
-                    MessageBox.Show("Se modifico correctamente el cliente.");
-                }
-                else
-                {
-                    MessageBox.Show("No se pudo realizar la modificacion.");
-
-                }
+                CargarClienteAsync(cliente);
             }
             else
             {
                 lblAviso.Visible = true;
+            }
+        }
+
+        // metodo para hacer un put de un cliente (update)
+        private async void CargarClienteAsync(Clientes cliente)
+        {
+            string url = $"https://localhost:7265/api/Clientes/Modificar";
+            string bodyContent = JsonConvert.SerializeObject(cliente);
+
+            var result = await ClientSingleton.GetInstance().PostAsync(url, bodyContent);
+
+            if (result.Equals("true"))
+            {
+                MessageBox.Show("Cliente registrado", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("ERROR. No se pudo registrar el cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
