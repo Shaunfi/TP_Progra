@@ -432,9 +432,20 @@ CREATE PROCEDURE SP_DESHABILITAR_PRODUCTO
 @id INT
 AS
 BEGIN
-	UPDATE PRODUCTOS
-	SET activo = 0
-	WHERE cod_producto = @id
+	DECLARE @act BIT
+	SET @act = (SELECT activo FROM PRODUCTOS WHERE cod_producto = @id)
+	IF @act = 1
+	BEGIN
+		UPDATE PRODUCTOS
+		SET activo = 0
+		WHERE cod_producto = @id
+	END
+	ELSE
+	BEGIN
+		UPDATE PRODUCTOS
+		SET activo = 1
+		WHERE cod_producto = @id
+	END
 END
 GO
 
