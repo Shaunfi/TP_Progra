@@ -95,7 +95,7 @@ namespace Frontend.Presentaciones_2.PClientes
         }
         private async void ListarClientes(string nombre)
         {
-            string url = $"https://localhost:7265/api/Clientes/Consultar?nombre={nombre}";
+            string url = $"https://localhost:7265/api/Clientes/Consultar/{nombre}";
             var result = await ClientSingleton.GetInstance().GetAsync(url);
             var list = JsonConvert.DeserializeObject<List<Clientes>>(result);
 
@@ -110,7 +110,7 @@ namespace Frontend.Presentaciones_2.PClientes
         }
         private async void ListarClientes(string nombre, int nroDoc)
         {
-            string url = $"https://localhost:7265/api/Clientes/Consultar?nombre={nombre}&nroDoc={nroDoc}";
+            string url = $"https://localhost:7265/api/Clientes/Consultar/{nombre}/{nroDoc}";
             var result = await ClientSingleton.GetInstance().GetAsync(url);
             var list = JsonConvert.DeserializeObject<List<Clientes>>(result);
 

@@ -95,7 +95,7 @@ namespace APIFarmacia.Controllers
         }
 
         // PUT api/<ClientesController>/5
-        [HttpPut("modificar")]
+        [HttpPost("Modificar")]
         public IActionResult Put([FromBody] Clientes cliente)
         {
             try
