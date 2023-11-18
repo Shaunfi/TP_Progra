@@ -245,8 +245,17 @@ namespace Frontend.Presentaciones_2.Facturaciones
                 factura.Sucursal = sucursal;
                 TablasAuxiliares tipoPago = (TablasAuxiliares)cboFormaPago.SelectedItem;
                 factura.TipoPago = tipoPago.Valor;
-                
-                // se esta cargando sin el detalle factura
+
+                //foreach (DataGridViewRow row in dgvDetalles.Rows)
+                //{
+                //    if (row.Cells[0].Value != null)
+                //    {
+                //        DetallesFactura df = (DetallesFactura)row.Cells[0].Value;
+                //        factura.AgregarDetalle(df);
+                //    }
+                //}
+
+                // No esta trayendo el nro de factura para pasarlo al detalle
                 CargarFacturaAsync(factura);
             }
             else

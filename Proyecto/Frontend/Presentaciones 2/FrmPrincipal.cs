@@ -111,7 +111,7 @@ namespace Frontend.Presentaciones_2
 
         }
 
-
+        // este no hace nada
         private void btnConsultarVenta_Click(object sender, EventArgs e)
         {
             new FrmConsultarVentas(fabrica).ShowDialog();
