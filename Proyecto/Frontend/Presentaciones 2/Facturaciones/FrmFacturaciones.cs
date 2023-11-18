@@ -214,6 +214,7 @@ namespace Frontend.Presentaciones_2.Facturaciones
 
                 DetallesFactura df = new DetallesFactura();
 
+                df.NroFactura = factura.NroFactura;
                 df.Producto = p;
                 df.Cantidad = Convert.ToInt32(numCantidad.Value);
                 df.Descuento = servicio.Productos.ConsultarDescuento(df.Producto, factura.Cliente);
@@ -246,16 +247,8 @@ namespace Frontend.Presentaciones_2.Facturaciones
                 TablasAuxiliares tipoPago = (TablasAuxiliares)cboFormaPago.SelectedItem;
                 factura.TipoPago = tipoPago.Valor;
 
-                //foreach (DataGridViewRow row in dgvDetalles.Rows)
-                //{
-                //    if (row.Cells[0].Value != null)
-                //    {
-                //        DetallesFactura df = (DetallesFactura)row.Cells[0].Value;
-                //        factura.AgregarDetalle(df);
-                //    }
-                //}
-
                 // No esta trayendo el nro de factura para pasarlo al detalle
+                // y no se si estan cargando los detalles en la BD
                 CargarFacturaAsync(factura);
             }
             else
