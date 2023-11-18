@@ -3,6 +3,8 @@ using Backend.Factory;
 using Backend.Servicio;
 using Backend.Entidades;
 using Frontend.Presentaciones_2.Avisos;
+using Frontend.Client;
+using Newtonsoft.Json;
 
 namespace Frontend.Presentaciones_2.Facturaciones
 {
@@ -75,17 +77,30 @@ namespace Frontend.Presentaciones_2.Facturaciones
             DateTime fechaHasta = dtpHasta.Value;
             string cliente = txtCliente.Text;
 
-            foreach (Facturas factura in servicios.Facturas.ListarFiltros(fechaDesde, fechaHasta, cliente, nroFactura))
+            ListarClientes(fechaDesde, fechaHasta, cliente, nroFactura);            
+        }
+
+        private async void ListarClientes(DateTime fDesde, DateTime fHasta, string cliente, int nroF)
+        {
+            string url = $"https://localhost:7265/api/Facturas/Consultar/{fDesde}/{fHasta}{cliente}/{nroF}";
+            var result = await ClientSingleton.GetInstance().GetAsync(url);
+            var list = JsonConvert.DeserializeObject<List<Facturas>>(result);
+
+            dgvConsultarVentas.Rows.Clear();
+            if (list != null)
             {
-                dgvConsultarVentas.Rows.Add(factura,
-                                            factura.NroFactura,
-                                            factura.Fecha,
-                                            servicios.Empleados.ConsultarEmpleado(factura.Empleado.CodEmpleado),
-                                            servicios.Clientes.ConsultarCliente(factura.Cliente.CodCliente),
-                                            servicios.Sucursales.ConsultarSucursal(factura.Sucursal.CodSucursal),
-                                            servicios.TablasAuxiliares.ConsultarFormaPago(factura.TipoPago),
-                                            "Ver Detalles",
-                                            "Dar de Baja");
+                foreach (Facturas factura in list)
+                {
+                    dgvConsultarVentas.Rows.Add(factura,
+                                                factura.NroFactura,
+                                                factura.Fecha,
+                                                servicios.Empleados.ConsultarEmpleado(factura.Empleado.CodEmpleado),
+                                                servicios.Clientes.ConsultarCliente(factura.Cliente.CodCliente),
+                                                servicios.Sucursales.ConsultarSucursal(factura.Sucursal.CodSucursal),
+                                                servicios.TablasAuxiliares.ConsultarFormaPago(factura.TipoPago),
+                                                "Ver Detalles",
+                                                "Dar de Baja");
+                }
             }
         }
 

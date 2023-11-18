@@ -23,14 +23,14 @@ namespace APIFarmacia.Controllers
 
 
         // GET: api/<FacturasController>
-        [HttpGet]
-        public IActionResult Get(DateTime fechaDesde, DateTime fechaHasta, string cliente, int nroFactura)
+        [HttpGet("Consultar/{fHasta}/{fDesde}/{cliente}/{nroF}")]
+        public IActionResult Get(DateTime fHasta, DateTime fDesde, string cliente, int nroF)
         {
             List<object> list = null;
             try
             {
                 // ver si algun parametro puede ser null, manejarlo
-                list = servicio.Facturas.ListarFiltros(fechaDesde, fechaHasta, cliente, nroFactura);
+                list = servicio.Facturas.ListarFiltros(fDesde, fHasta, cliente, nroF);
                 return Ok(list);
             }
             catch (Exception ex)
@@ -39,12 +39,6 @@ namespace APIFarmacia.Controllers
             }
         }
 
-        // GET api/<FacturasController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
 
         // GET api/<FacturasController>/5
         [HttpGet("{id}/detalles")]

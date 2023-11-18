@@ -2,7 +2,9 @@
 using Backend.Entidades;
 using Backend.Factory;
 using Backend.Servicio;
+using Frontend.Client;
 using Frontend.Presentaciones_2.Avisos;
+using Newtonsoft.Json;
 
 namespace Frontend.Presentaciones_2.Facturaciones
 {
@@ -243,20 +245,32 @@ namespace Frontend.Presentaciones_2.Facturaciones
                 factura.Sucursal = sucursal;
                 TablasAuxiliares tipoPago = (TablasAuxiliares)cboFormaPago.SelectedItem;
                 factura.TipoPago = tipoPago.Valor;
-                if (servicio.Facturas.Agregar(factura))
-                {
-                    FrmExito exito = new FrmExito();
-                    exito.ShowDialog();
-                }
-                else
-                {
-                    FrmError error = new FrmError();
-                    error.ShowDialog();
-                }
+                
+                // se esta cargando sin el detalle factura
+                CargarFacturaAsync(factura);
             }
             else
             {
                 lblAviso.Visible = true;
+            }
+        }
+
+        // metodo para hacer un post de una factura
+        private async void CargarFacturaAsync(Facturas factura)
+        {
+            string url = $"https://localhost:7265/api/Facturas";
+            string bodyContent = JsonConvert.SerializeObject(factura);
+
+            var result = await ClientSingleton.GetInstance().PostAsync(url, bodyContent);
+
+            if (result.Equals("true"))
+            {
+                MessageBox.Show("Factura registrada", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("ERROR. No se pudo registrar la factura", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
