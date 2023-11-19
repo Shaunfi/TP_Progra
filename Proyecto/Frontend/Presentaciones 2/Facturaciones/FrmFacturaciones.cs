@@ -248,8 +248,7 @@ namespace Frontend.Presentaciones_2.Facturaciones
                 TablasAuxiliares tipoPago = (TablasAuxiliares)cboFormaPago.SelectedItem;
                 factura.TipoPago = tipoPago.Valor;
 
-                // No esta trayendo el nro de factura para pasarlo al detalle
-                // y no se si estan cargando los detalles en la BD
+                // No esta pasando la lista de detalles factura
                 CargarFacturaAsync(factura);
             }
             else
