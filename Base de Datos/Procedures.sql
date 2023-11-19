@@ -658,3 +658,11 @@ BEGIN
 		set @cod_sucursal = 0
 END
 GO
+	
+CREATE PROCEDURE SP_PROXIMA_FACTURA
+@prox_nro INT OUTPUT
+AS
+BEGIN
+	SET @prox_nro = (SELECT MAX(nro_factura) FROM FACTURAS) + 1
+END
+GO
