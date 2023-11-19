@@ -123,5 +123,15 @@ namespace Backend.Datos.Implementacion
             }
             return listDetalles;
         }
+
+        public int ProxNroFactura()
+        {
+            SqlParameter paramOut = new SqlParameter("@prox_nro", SqlDbType.Int);
+            paramOut.Direction = ParameterDirection.Output;
+
+            AccesoDatosDAO.ObtenerInstancia().ProcedureNonExecuter("SP_PROXIMA_FACTURA", paramOut);
+
+            return (int)paramOut.Value;
+        }
     }
 }

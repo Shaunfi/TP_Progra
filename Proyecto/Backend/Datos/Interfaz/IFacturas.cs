@@ -8,5 +8,6 @@ namespace Backend.Datos.Interfaz
         List<object> ListarFiltros(DateTime fechaDesde, DateTime fechaHasta, string cliente, int nroFactura);
         bool DarDeBaja(int nroFactura);
         List<object> ListarDetalles(int nroFactura);
+        int ProxNroFactura();
     }
 }

@@ -30,6 +30,7 @@ namespace Frontend.Presentaciones_2.Facturaciones
             CargarComboBox(cboBoxProducto, "CodProducto", "Descripcion", servicio.Productos.Listar());
             CargarComboBox(cboBoxTipoProducto, "Valor", "Display", servicio.TablasAuxiliares.ListarTiposProductos());
             CargarComboBox(cboFormaPago, "Valor", "Display", servicio.TablasAuxiliares.ListarFormasDePago());
+            factura.NroFactura = servicio.Facturas.ProxNroFactura();
             Limpiar(true);
         }
         #endregion
