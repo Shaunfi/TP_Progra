@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1659F280-FE60-4514-8D31-C5A7C862595D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TPPepas</RootNamespace>
+    <AssemblyName>TPPepas</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.340.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.340.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.340.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.340.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.340.80\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.340.80\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Datos\AccesoDatos.cs" />
+    <Compile Include="Datos\Implementacion\ClientesDAO.cs" />
+    <Compile Include="Datos\Implementacion\DetallesFacturaDAO.cs" />
+    <Compile Include="Datos\Implementacion\FacturasDAO.cs" />
+    <Compile Include="Datos\Implementacion\LotesDAO.cs" />
+    <Compile Include="Datos\Implementacion\PedidosDAO.cs" />
+    <Compile Include="Datos\Implementacion\ProductosDAO.cs" />
+    <Compile Include="Datos\Implementacion\TablasAuxiliaresDAO.cs" />
+    <Compile Include="Datos\Interfaz\IClientes.cs" />
+    <Compile Include="Datos\Interfaz\IDetallesFactura.cs" />
+    <Compile Include="Datos\Interfaz\IFacturas.cs" />
+    <Compile Include="Datos\Interfaz\ILotes.cs" />
+    <Compile Include="Datos\Interfaz\IPedidos.cs" />
+    <Compile Include="Datos\Interfaz\IProductos.cs" />
+    <Compile Include="Datos\Interfaz\ITablasAuxiliares.cs" />
+    <Compile Include="Entidades\Clientes.cs" />
+    <Compile Include="Entidades\DetallesFactura.cs" />
+    <Compile Include="Entidades\Empleados.cs" />
+    <Compile Include="Entidades\Facturas.cs" />
+    <Compile Include="Entidades\Laboratorios.cs" />
+    <Compile Include="Entidades\Lotes.cs" />
+    <Compile Include="Entidades\Medicos.cs" />
+    <Compile Include="Entidades\Pedidos.cs" />
+    <Compile Include="Entidades\Personas.cs" />
+    <Compile Include="Entidades\Productos.cs" />
+    <Compile Include="Entidades\Proveedores.cs" />
+    <Compile Include="Entidades\Recetas.cs" />
+    <Compile Include="Entidades\Reembolsos.cs" />
+    <Compile Include="Entidades\Respaldos.cs" />
+    <Compile Include="Entidades\Sucursales.cs" />
+    <Compile Include="Entidades\TablasAuxiliares.cs" />
+    <Compile Include="Factory\FactoryAbs.cs" />
+    <Compile Include="Factory\FactoryImp.cs" />
+    <Compile Include="Presentaciones\frmConsultarProvedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmConsultarProvedor.Designer.cs">
+      <DependentUpon>frmConsultarProvedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmAgregarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmAgregarProveedor.Designer.cs">
+      <DependentUpon>frmAgregarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmConsultarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmConsultarCliente.Designer.cs">
+      <DependentUpon>frmConsultarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmAgregarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmAgregarCliente.Designer.cs">
+      <DependentUpon>frmAgregarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmAgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmAgregarProducto.Designer.cs">
+      <DependentUpon>frmAgregarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmConsultarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmConsultarProductos.Designer.cs">
+      <DependentUpon>frmConsultarProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmConsultarVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmConsultarVentas.Designer.cs">
+      <DependentUpon>frmConsultarVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\FrmFacturaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\FrmFacturaciones.Designer.cs">
+      <DependentUpon>FrmFacturaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\Program.cs" />
+    <Compile Include="Presentaciones\frmFacturacionesBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmFacturacionesBusqueda.Designer.cs">
+      <DependentUpon>frmFacturacionesBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmPRINCIPAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmPRINCIPAL.Designer.cs">
+      <DependentUpon>frmPRINCIPAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\LOGIN.Designer.cs">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RAMI\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RAMI\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RAMI\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Datos_reporte.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datos_reporte.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteVentas.Designer.cs">
+      <DependentUpon>ReporteVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servicio\IServicios.cs" />
+    <Compile Include="Servicio\Servicios.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Presentaciones\frmConsultarProvedor.resx">
+      <DependentUpon>frmConsultarProvedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmAgregarProveedor.resx">
+      <DependentUpon>frmAgregarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmConsultarCliente.resx">
+      <DependentUpon>frmConsultarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmAgregarCliente.resx">
+      <DependentUpon>frmAgregarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmAgregarProducto.resx">
+      <DependentUpon>frmAgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmConsultarProductos.resx">
+      <DependentUpon>frmConsultarProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmConsultarVentas.resx">
+      <DependentUpon>frmConsultarVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\FrmFacturaciones.resx">
+      <DependentUpon>FrmFacturaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmFacturacionesBusqueda.resx">
+      <DependentUpon>frmFacturacionesBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmPRINCIPAL.resx">
+      <DependentUpon>frmPRINCIPAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\LOGIN.resx">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RAMI\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RAMI\Report1.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteVentas.resx">
+      <DependentUpon>ReporteVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_ventas.rdlc" />
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Configuracion\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RAMI\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="RAMI\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RAMI\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\Datos_reporte.xsc">
+      <DependentUpon>Datos_reporte.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\Datos_reporte.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Datos_reporte.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\Datos_reporte.xss">
+      <DependentUpon>Datos_reporte.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\photo-1607619056574-7b8d3ee536b2.jpeg" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\139-1390528_linea-linea-png-fotor-bg-remover-20231017152816.png" />
+    <Content Include="Resources\86906b68d2a52712a832657c52de4815-divisor-de-linea-de-borde-adornado.png" />
+    <Content Include="Resources\Blue-Line-PNG-Free-Download.png" />
+    <Content Include="Resources\Blue-Line-PNG-Picture.png" />
+    <Content Include="Resources\cerrar.png" />
+    <Content Include="Resources\login-buttons-sign-label-speech-login-vector-fotor-bg-remover-20231017154555.png" />
+    <Content Include="Resources\LogoDeMarca.png" />
+    <Content Include="Resources\maxi.png" />
+    <Content Include="Resources\minimazar.png" />
+    <Content Include="Resources\photo-1607619056574-7b8d3ee536b21.jpeg" />
+    <Content Include="Resources\res.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
