@@ -58,32 +58,11 @@ namespace Frontend.Presentaciones_2.PPedidos
 
         private void dgvConsultarPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvConsultarPedidos.CurrentCell.ColumnIndex == 5)
-            {
-                dgvConsultarPedidos.Visible = false;
-                dgvLotes.Visible = true;
-                Pedidos pedido = (Pedidos)dgvConsultarPedidos.CurrentRow.Cells[0].Value;
-                foreach (Lotes lt in servicios.Pedidos.ListarLotes(pedido.CodPedido))
-                {
-                    dgvLotes.Rows.Add(lt,
-                                      servicios.Productos.ConsultarProducto(lt.Producto.CodProducto),
-                                      lt.Precio,
-                                      lt.Cantidad,
-                                      lt.FechaVencimiento,
-                                      servicios.Proveedores.ConsultarProveedor(lt.Proveedor.CodProveedor),
-                                      "Volver");
-                }
-            }
+            
         }
 
         private void dgvLotes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvLotes.CurrentCell.ColumnIndex == 6)
-            {
-                dgvLotes.Visible = false;
-                dgvConsultarPedidos.Visible = true;
-                dgvLotes.Rows.Clear();
-            }
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -120,7 +99,42 @@ namespace Frontend.Presentaciones_2.PPedidos
 
             foreach (Pedidos p in servicios.Pedidos.ListarFiltro(desde, hasta, nroS))
             {
-                dgvConsultarPedidos.Rows.Add(new object[] { p, p.CodPedido, p.FechaPedido, p.Sucursal.CodSucursal, p.TipoPago, "Ver Lotes" });
+                dgvConsultarPedidos.Rows.Add(new object[] { p,
+                                                            p.CodPedido,
+                                                            p.FechaPedido,
+                                                            servicios.Sucursales.ConsultarSucursal(p.Sucursal.CodSucursal),
+                                                            servicios.TablasAuxiliares.ConsultarFormaPago(p.TipoPago),
+                                                            "Ver Lotes" });
+            }
+        }
+
+        private void dgvLotes_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvLotes.CurrentCell.ColumnIndex == 6)
+            {
+                dgvLotes.Visible = false;
+                dgvConsultarPedidos.Visible = true;
+                dgvLotes.Rows.Clear();
+            }
+        }
+
+        private void dgvConsultarPedidos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvConsultarPedidos.CurrentCell.ColumnIndex == 5)
+            {
+                dgvConsultarPedidos.Visible = false;
+                dgvLotes.Visible = true;
+                Pedidos pedido = (Pedidos)dgvConsultarPedidos.CurrentRow.Cells[0].Value;
+                foreach (Lotes lt in servicios.Pedidos.ListarLotes(pedido.CodPedido))
+                {
+                    dgvLotes.Rows.Add(lt,
+                                      servicios.Productos.ConsultarProducto(lt.Producto.CodProducto),
+                                      lt.Precio,
+                                      lt.Cantidad,
+                                      lt.FechaVencimiento,
+                                      servicios.Proveedores.ConsultarProveedor(lt.Proveedor.CodProveedor),
+                                      "Volver");
+                }
             }
         }
     }

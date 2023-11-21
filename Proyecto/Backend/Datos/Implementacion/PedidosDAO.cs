@@ -68,6 +68,7 @@ namespace Backend.Datos.Implementacion
                 p.CodPedido = Convert.ToInt32(row[0].ToString());
                 p.FechaPedido = Convert.ToDateTime(row[1].ToString());
                 p.Sucursal.CodSucursal = Convert.ToInt32(row[2].ToString());
+                p.TipoPago = Convert.ToInt32(row[3].ToString());
                 // p.LLotes como manejar los lotes
 
 
@@ -93,6 +94,7 @@ namespace Backend.Datos.Implementacion
                 p.CodPedido = Convert.ToInt32(row[0].ToString());
                 p.FechaPedido = Convert.ToDateTime(row[1].ToString());
                 p.Sucursal.CodSucursal = Convert.ToInt32(row[2].ToString());
+                p.TipoPago = Convert.ToInt32(row[3].ToString());
                 // p.LLotes como manejar los lotes
 
 

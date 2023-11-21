@@ -36,13 +36,13 @@ namespace Backend.Datos.Implementacion
 
                 AccesoDatosDAO.ObtenerInstancia().ProcedureNonExecuter("SP_INSERTAR_FACTURAS", listParam, t);
 
-                factura.NroFactura = Convert.ToInt32(paramOut.Value);
+                //factura.NroFactura = Convert.ToInt32(paramOut.Value);
 
                 daoDetalles.Agregar(factura, t);
 
                 daoDetalles.ModificarStock(factura, t);
 
-                t?.Commit();
+                t.Commit();
             }
             catch
             {
