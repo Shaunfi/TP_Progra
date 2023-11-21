@@ -255,8 +255,9 @@ BEGIN
 	AND f.fecha BETWEEN @fecha_desde AND @fecha_hasta
 	AND f.cod_cliente IN (SELECT cod_cliente 
 			      FROM CLIENTES c
-			      WHERE c.nom_cliente LIKE '%'  + @cliente + '%'
-			      OR c.ape_cliente LIKE '%'  + @cliente + '%')
+			      WHERE (@cliente IS NULL) OR
+				  (c.nom_cliente LIKE '%'  + @cliente + '%'
+			      OR c.ape_cliente LIKE '%'  + @cliente + '%'))
 END
 GO
 
