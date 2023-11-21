@@ -56,7 +56,7 @@ namespace Frontend.Presentaciones_2.Facturaciones
         #endregion
 
         #region Validar
-        private bool ValidarAgregar()
+        private bool ValidarAgregar(Productos prod)
         {
 
             if (cboBoxProducto.SelectedIndex == -1)
@@ -65,12 +65,12 @@ namespace Frontend.Presentaciones_2.Facturaciones
                 return false;
             }
             int cantidad = Convert.ToInt32(numCantidad.Value);
-            //if (cantidad > servicio.Productos.ConsultarStock(empleado.CodEmpleado, sucursal.CodSucursal))
-            //{
-                
-            //    MessageBox.Show("No hay stock suficiente del producto.", "Validaciones", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-            //    return false;
-            //}
+            if (cantidad > servicio.Productos.ConsultarStock(prod.CodProducto, sucursal.CodSucursal))
+            {
+
+                MessageBox.Show("No hay stock suficiente del producto.", "Validaciones", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                return false;
+            }
 
             return true;
         }
@@ -209,7 +209,7 @@ namespace Frontend.Presentaciones_2.Facturaciones
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (ValidarAgregar())
+            if (ValidarAgregar((Productos)cboBoxProducto.SelectedItem))
             {
                 Productos p = (Productos)cboBoxProducto.SelectedItem;
 

@@ -116,7 +116,17 @@ namespace Backend.Datos.Implementacion
 
             AccesoDatosDAO.ObtenerInstancia().ProcedureNonExecuter("SP_CONSULTAR_DESCUENTOS", listParam);
 
-            return Convert.ToDouble(outParam.Value);
+            double desc;
+            try
+            {
+                desc = Convert.ToDouble(outParam.Value);
+            }
+            catch (Exception ex)
+            {
+                desc = 0;
+            }
+
+            return desc;
         }
 
         public bool DeshabilitarProducto(int codProducto)
