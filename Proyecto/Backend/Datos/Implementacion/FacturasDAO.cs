@@ -65,7 +65,10 @@ namespace Backend.Datos.Implementacion
 
             listParam.Add(new SqlParameter("@fecha_desde", fechaDesde));
             listParam.Add(new SqlParameter("@fecha_hasta", fechaHasta));
-            listParam.Add(new SqlParameter("@cliente", cliente));
+            if(cliente != null || cliente != "" || cliente != string.Empty)
+            {
+                listParam.Add(new SqlParameter("@cliente", cliente));
+            }
             if (nroFactura > 0)
             {
                 listParam.Add(new SqlParameter("@nro_factura", nroFactura));

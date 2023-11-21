@@ -25,7 +25,7 @@ namespace APIFarmacia.Controllers
         // GET: api/<FacturasController>
         //[HttpGet("Consultar/{hasta}/{desde}/{cliente}/{nroF}")]
         [HttpGet("Consultar")]
-        public IActionResult Get(DateTime hasta, DateTime desde, string cliente, int nroF)
+        public IActionResult Get(DateTime hasta, DateTime desde, int nroF, string? cliente)
         {
             List<object> list = null;
             try
