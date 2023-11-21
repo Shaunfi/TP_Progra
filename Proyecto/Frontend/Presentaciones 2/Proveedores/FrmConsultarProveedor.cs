@@ -70,7 +70,7 @@ namespace Frontend.Presentaciones_2.PProveedores
             foreach (Proveedores p in servicio.Proveedores.ListarFiltro(nom))
             {
                 string direccion = p.Calle + ' ' + p.Altura.ToString();
-                dgvConsultarProveedor.Rows.Add(new object[] { p.CodProveedor, p.NombreProveedor, direccion, p.Telefono, p.Email, "modificar" });
+                dgvConsultarProveedor.Rows.Add(new object[] { p.CodProveedor, p.NombreProveedor, direccion, p.Telefono, p.Email, "Modificar" });
             }
         }
 

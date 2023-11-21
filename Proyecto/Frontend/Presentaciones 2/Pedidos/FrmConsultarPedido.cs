@@ -51,27 +51,7 @@ namespace Frontend.Presentaciones_2.PPedidos
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dgvConsultarPedidos.Rows.Clear();
-
-            int sucursal = 1;
-            int nroPedido = 0;
-            DateTime desde = dtpDesde.Value;
-            DateTime hasta = dtpHasta.Value;
-            if (int.TryParse(nudNroPedido.Text, out _))
-            {
-                nroPedido = Convert.ToInt32(nudNroPedido.Text);
-            }
-            if (nroPedido > 0)
-            {
-                foreach (Pedidos p in servicios.Pedidos.ListarFiltro(desde, hasta, nroPedido))
-                {
-                    dgvConsultarPedidos.Rows.Add(new object[] { p, p.CodPedido, p.FechaPedido, p.Sucursal.CodSucursal, p.TipoPago, "Ver Lotes" });
-                }
-            }
-            else
-            {
-
-            }
+            
         }
 
         private void dgvConsultarPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -125,6 +105,27 @@ namespace Frontend.Presentaciones_2.PPedidos
         {
             dgvLotes.Visible = false;
             
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            dgvConsultarPedidos.Rows.Clear();
+
+            int sucursal = 1;
+            int nroPedido = 0;
+            DateTime desde = dtpDesde.Value;
+            DateTime hasta = dtpHasta.Value;
+            if (int.TryParse(nudNroPedido.Text, out _))
+            {
+                nroPedido = Convert.ToInt32(nudNroPedido.Text);
+            }
+            if (nroPedido > 0)
+            {
+                foreach (Pedidos p in servicios.Pedidos.ListarFiltro(desde, hasta, nroPedido))
+                {
+                    dgvConsultarPedidos.Rows.Add(new object[] { p, p.CodPedido, p.FechaPedido, p.Sucursal.CodSucursal, p.TipoPago, "Ver Lotes" });
+                }
+            }
         }
     }
 }
