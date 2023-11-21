@@ -572,12 +572,12 @@ CREATE PROCEDURE SP_CONSULTAR_PEDIDOS_FILTROS
 @fecha_desde DATETIME,
 @fecha_hasta DATETIME,
 @sucursal int,
-@nro_pedido int
+@nro_pedido int = NULL
 AS
 BEGIN
 	SELECT * FROM PEDIDOS
 	WHERE fecha_pedido BETWEEN @fecha_desde and @fecha_hasta
-	AND ((@sucursal IS NULL) OR (cod_pedido = @sucursal))
+	AND ((@sucursal IS NULL) OR (cod_sucursal = @sucursal))
 	AND ((@nro_pedido IS NULL) OR (cod_pedido = @nro_pedido))
 END
 GO
