@@ -599,7 +599,7 @@ CREATE PROCEDURE SP_MODIFICAR_STOCK
 AS
 BEGIN
 	UPDATE STOCK_SUCURSALES
-	SET stock = stock + @cantidad
+	SET stock = stock - @cantidad
 	WHERE cod_sucursal = @cod_sucursal
 		AND cod_producto = @cod_producto
 END
