@@ -65,7 +65,7 @@ namespace Frontend.Presentaciones_2
         }
 
 
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private void btnCerrar_Click_1(object sender, EventArgs e)
         {
             FrmSalir Salir = new FrmSalir();
             Salir.ShowDialog();
@@ -85,7 +85,7 @@ namespace Frontend.Presentaciones_2
             btnMaximizar.Visible = true;
         }
 
-        private void btnMinimizar_Click(object sender, EventArgs e)
+        private void btnMinimizar_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
@@ -106,11 +106,6 @@ namespace Frontend.Presentaciones_2
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btnVentas_Click(object sender, EventArgs e)
-        {
-
-        }
-
         // este no hace nada
         private void btnConsultarVenta_Click(object sender, EventArgs e)
         {
@@ -119,12 +114,12 @@ namespace Frontend.Presentaciones_2
 
         //--------------------------VENTAS---------------------------
 
-        private void btnVentas_Click_1(object sender, EventArgs e)
+        private void btnVentas_Click(object sender, EventArgs e)
         {
             showSubMenu(pnlSubMenuVenta);
         }
 
-        private void btnNuevaVenta_Click(object sender, EventArgs e)
+        private void btnNuevaVenta_Click_1(object sender, EventArgs e)
         {
             //Meter acá el formulario necesario
             new FrmFacturaciones(fabrica, sucursal).ShowDialog();
@@ -139,19 +134,19 @@ namespace Frontend.Presentaciones_2
 
         //--------------------------PRODUCTO--------------------------
 
-        private void button1_Click(object sender, EventArgs e) //btnProducto
+        private void btnProducto_Click(object sender, EventArgs e) //btnProducto
         {
             showSubMenu(pnlSubMenuProducto);
         }
 
-        private void btnAgregarProducto_Click(object sender, EventArgs e)
+        private void btnAgregarProducto_Click_1(object sender, EventArgs e)
         {
             //Meter acá el formulario necesario
             new FrmAgregarProductos(fabrica).ShowDialog();
             hideSubMenu();
         }
 
-        private void btnConsultarProducto_Click(object sender, EventArgs e)
+        private void btnConsultarProducto_Click_1(object sender, EventArgs e)
         {
             new FrmConsultarProducto(fabrica, sucursal).ShowDialog();
             hideSubMenu();
@@ -159,19 +154,19 @@ namespace Frontend.Presentaciones_2
 
         //--------------------------CLIENTE--------------------------
 
-        private void btnCliente_Click(object sender, EventArgs e)
+        private void btnCliente_Click_1(object sender, EventArgs e)
         {
             showSubMenu(pnlSubMenuCliente);
         }
 
-        private void btnAgregarCliente_Click(object sender, EventArgs e)
+        private void btnAgregarCliente_Click_1(object sender, EventArgs e)
         {
             //Meter acá el formulario necesario
             new FrmAgregarClientes(fabrica).ShowDialog();
             hideSubMenu();
         }
 
-        private void btnConsultarCliente_Click(object sender, EventArgs e)
+        private void btnConsultarCliente_Click_1(object sender, EventArgs e)
         {
             //Meter acá el formulario necesario
             new FrmConsultarClientes(fabrica).ShowDialog();
@@ -201,21 +196,21 @@ namespace Frontend.Presentaciones_2
 
         //--------------------------INFORME-------------------------
 
-        private void btnInforme_Click(object sender, EventArgs e)
+        private void btnInforme_Click_1(object sender, EventArgs e)
         {
             showSubMenu(pnlSubMenuInforme);
         }
 
         //--------------------------AYUDA---------------------------
 
-        private void btnAyuda_Click(object sender, EventArgs e)
+        private void btnAyuda_Click_1(object sender, EventArgs e)
         {
             showSubMenu(pnlSubMenuAyuda);
         }
 
         //--------------------------PEDIDOS---------------------------
 
-        private void btnPedidos_Click(object sender, EventArgs e)
+        private void btnPedidos_Click_1(object sender, EventArgs e)
         {
             showSubMenu(pnlSubMenuPedido);
         }
@@ -235,7 +230,7 @@ namespace Frontend.Presentaciones_2
 
         //--------------------------USUARIO---------------------------
 
-        private void btnUsuario_Click(object sender, EventArgs e)
+        private void btnUsuario_Click_1(object sender, EventArgs e)
         {
             FrmUsuario usu = new FrmUsuario();
             usu.ShowDialog();
@@ -244,7 +239,6 @@ namespace Frontend.Presentaciones_2
             {
                 this.Dispose();
                 new FrmLogin(fabrica).Show();
-                //Hacer LOGIN VISIBLE QUITAR HIDE
             }
         }
 
@@ -260,16 +254,17 @@ namespace Frontend.Presentaciones_2
 
         //--------------------------AYUDA---------------------------
 
-        private void btnAcercaDe_Click(object sender, EventArgs e)
+        private void btnAcercaDe_Click_1(object sender, EventArgs e)
         {
             new AcercaDe(fabrica).ShowDialog();
             hideSubMenu();
         }
 
-        private void btnPreguntas_Click(object sender, EventArgs e)
+        private void btnPreguntas_Click_1(object sender, EventArgs e)
         {
             new PreguntasFrecuentes(fabrica).ShowDialog();
             hideSubMenu();
         }
+
     }
 }

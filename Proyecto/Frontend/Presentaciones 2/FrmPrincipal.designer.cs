@@ -136,6 +136,7 @@
             this.btnUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnUsuario.TabIndex = 1;
             this.btnUsuario.TabStop = false;
+            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click_1);
             // 
             // btnRestaurar
             // 
@@ -150,6 +151,7 @@
             this.btnRestaurar.TabIndex = 3;
             this.btnRestaurar.TabStop = false;
             this.btnRestaurar.Visible = false;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
             // 
             // btnMaximizar
             // 
@@ -189,6 +191,7 @@
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
             // 
             // fileSystemWatcher1
             // 
@@ -250,6 +253,7 @@
             this.btnAcercaDe.TabIndex = 1;
             this.btnAcercaDe.Text = "Acerca de ";
             this.btnAcercaDe.UseVisualStyleBackColor = false;
+            this.btnAcercaDe.Click += new System.EventHandler(this.btnAcercaDe_Click_1);
             // 
             // btnPreguntas
             // 
@@ -267,6 +271,7 @@
             this.btnPreguntas.TabIndex = 0;
             this.btnPreguntas.Text = "Preguntas Frecuentes";
             this.btnPreguntas.UseVisualStyleBackColor = false;
+            this.btnPreguntas.Click += new System.EventHandler(this.btnPreguntas_Click_1);
             // 
             // btnAyuda
             // 
@@ -285,6 +290,7 @@
             this.btnAyuda.TabIndex = 6;
             this.btnAyuda.Text = "Ayuda";
             this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click_1);
             // 
             // pnlSubMenuInforme
             // 
@@ -386,6 +392,7 @@
             this.btnInforme.TabIndex = 5;
             this.btnInforme.Text = "Informes";
             this.btnInforme.UseVisualStyleBackColor = true;
+            this.btnInforme.Click += new System.EventHandler(this.btnInforme_Click_1);
             // 
             // pnlSubMenuPedido
             // 
@@ -415,6 +422,7 @@
             this.btnConsultarPedido.TabIndex = 1;
             this.btnConsultarPedido.Text = "Consultar Pedido";
             this.btnConsultarPedido.UseVisualStyleBackColor = false;
+            this.btnConsultarPedido.Click += new System.EventHandler(this.btnConsultarPedido_Click);
             // 
             // btnNuevoPedido
             // 
@@ -432,6 +440,7 @@
             this.btnNuevoPedido.TabIndex = 0;
             this.btnNuevoPedido.Text = "Nuevo Pedido";
             this.btnNuevoPedido.UseVisualStyleBackColor = false;
+            this.btnNuevoPedido.Click += new System.EventHandler(this.btnNuevoPedido_Click);
             // 
             // btnPedidos
             // 
@@ -451,6 +460,7 @@
             this.btnPedidos.TabIndex = 4;
             this.btnPedidos.Text = "Pedidos";
             this.btnPedidos.UseVisualStyleBackColor = true;
+            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click_1);
             // 
             // pnlSubMenuProveedor
             // 
@@ -480,6 +490,7 @@
             this.btnConsultarProveedor.TabIndex = 1;
             this.btnConsultarProveedor.Text = "Consultar Proveedor";
             this.btnConsultarProveedor.UseVisualStyleBackColor = false;
+            this.btnConsultarProveedor.Click += new System.EventHandler(this.btnConsultarProveedor_Click);
             // 
             // btnAgregarProveedor
             // 
@@ -497,6 +508,7 @@
             this.btnAgregarProveedor.TabIndex = 0;
             this.btnAgregarProveedor.Text = "Agregar Proveedor";
             this.btnAgregarProveedor.UseVisualStyleBackColor = false;
+            this.btnAgregarProveedor.Click += new System.EventHandler(this.btnAgregarProveedor_Click);
             // 
             // btnProveedor
             // 
@@ -516,6 +528,7 @@
             this.btnProveedor.TabIndex = 3;
             this.btnProveedor.Text = "Proveedores";
             this.btnProveedor.UseVisualStyleBackColor = true;
+            this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
             // 
             // pnlSubMenuCliente
             // 
@@ -562,6 +575,7 @@
             this.btnAgregarCliente.TabIndex = 0;
             this.btnAgregarCliente.Text = "Agregar Cliente";
             this.btnAgregarCliente.UseVisualStyleBackColor = false;
+            this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click_1);
             // 
             // btnCliente
             // 
@@ -581,6 +595,7 @@
             this.btnCliente.TabIndex = 2;
             this.btnCliente.Text = "Clientes";
             this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click_1);
             // 
             // pnlSubMenuProducto
             // 
@@ -610,6 +625,7 @@
             this.btnConsultarProducto.TabIndex = 1;
             this.btnConsultarProducto.Text = "Consultar Producto";
             this.btnConsultarProducto.UseVisualStyleBackColor = false;
+            this.btnConsultarProducto.Click += new System.EventHandler(this.btnConsultarProducto_Click_1);
             // 
             // btnAgregarProducto
             // 
@@ -627,6 +643,7 @@
             this.btnAgregarProducto.TabIndex = 0;
             this.btnAgregarProducto.Text = "Agregar Producto";
             this.btnAgregarProducto.UseVisualStyleBackColor = false;
+            this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click_1);
             // 
             // btnProducto
             // 
@@ -646,6 +663,7 @@
             this.btnProducto.TabIndex = 1;
             this.btnProducto.Text = "Productos";
             this.btnProducto.UseVisualStyleBackColor = true;
+            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
             // pnlSubMenuVenta
             // 
@@ -675,6 +693,7 @@
             this.btnConsultarVenta.TabIndex = 1;
             this.btnConsultarVenta.Text = "Consultar Venta";
             this.btnConsultarVenta.UseVisualStyleBackColor = false;
+            this.btnConsultarVenta.Click += new System.EventHandler(this.btnConsultarVenta_Click_1);
             // 
             // btnNuevaVenta
             // 
@@ -692,6 +711,7 @@
             this.btnNuevaVenta.TabIndex = 0;
             this.btnNuevaVenta.Text = "Nueva Venta";
             this.btnNuevaVenta.UseVisualStyleBackColor = false;
+            this.btnNuevaVenta.Click += new System.EventHandler(this.btnNuevaVenta_Click_1);
             // 
             // btnVentas
             // 
@@ -711,6 +731,7 @@
             this.btnVentas.TabIndex = 0;
             this.btnVentas.Text = "Ventas";
             this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // panelLogo
             // 
