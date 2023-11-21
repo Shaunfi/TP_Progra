@@ -61,9 +61,13 @@ namespace Backend.Datos.Implementacion
             {
                 listParam.Clear();
 
+                Console.WriteLine($"{factura.Sucursal.CodSucursal} - {df.Producto.CodProducto} - {df.Cantidad}");
+
                 listParam.Add(new SqlParameter("@cod_sucursal", factura.Sucursal.CodSucursal));
                 listParam.Add(new SqlParameter("@cod_producto", df.Producto.CodProducto));
+
                 listParam.Add(new SqlParameter("@cantidad", df.Cantidad));
+
 
                 AccesoDatosDAO.ObtenerInstancia().ProcedureNonExecuter("SP_MODIFICAR_STOCK", listParam, t);
             }

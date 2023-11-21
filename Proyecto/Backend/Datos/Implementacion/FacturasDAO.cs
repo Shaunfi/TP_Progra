@@ -42,7 +42,7 @@ namespace Backend.Datos.Implementacion
 
                 daoDetalles.Agregar(factura, t);
 
-                daoDetalles.ModificarStock(factura, t);
+                // daoDetalles.ModificarStock(factura, t);
 
                 t?.Commit();
             }
