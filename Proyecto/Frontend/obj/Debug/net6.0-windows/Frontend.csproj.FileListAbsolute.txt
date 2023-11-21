@@ -113,3 +113,4 @@ C:\Users\joseg\OneDrive\Documentos\UTN Cba\TP II\ProyectoTP\TP_Progra\Proyecto\F
 C:\Users\joseg\OneDrive\Documentos\UTN Cba\TP II\ProyectoTP\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.pdb
 C:\Users\joseg\OneDrive\Documentos\UTN Cba\TP II\ProyectoTP\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.genruntimeconfig.cache
 C:\Users\joseg\OneDrive\Documentos\UTN Cba\TP II\ProyectoTP\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\ref\Frontend.dll
+C:\Users\joseg\OneDrive\Documentos\UTN Cba\TP II\ProyectoTP\TP_Progra\Proyecto\Frontend\obj\Debug\net6.0-windows\Frontend.Reportes.FrmReportes.resources

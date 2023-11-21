@@ -30,7 +30,7 @@ namespace Frontend.Presentaciones_2.PPedidos
             btnConfirmar.Enabled = false;
             CargarComboBox(cboProducto, "codProducto", "descripcion", servicios.Productos.Listar());
             CargarComboBox(cboTipoProducto, "Valor", "Display", servicios.TablasAuxiliares.ListarTiposProductos());
-            CargarComboBox(cboSucursales, "codSucursal", "calle", servicios.Sucursales.Listar());
+            CargarComboBox(cboSucursales, "codSucursal", "usuario", servicios.Sucursales.Listar());
             CargarComboBox(cboProveedores, "codProveedor", "NombreProveedor", servicios.Proveedores.Listar());
             CargarComboBox(cboFormaPago, "Valor", "Display", servicios.TablasAuxiliares.ListarFormasDePago());
             Limpiar(true);

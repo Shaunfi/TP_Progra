@@ -76,5 +76,8 @@
     <Compile Update="Presentaciones 2\Proveedores\FrmConsultarProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Reportes\FrmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
