@@ -66,7 +66,7 @@ namespace APIFarmacia.Controllers
         {
             try
             {
-                if(factura == null)
+                if (factura == null)
                 {
                     return BadRequest("Debes pasar una factura");
                 }

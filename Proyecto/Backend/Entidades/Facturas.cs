@@ -16,7 +16,7 @@ namespace Backend.Entidades
         public Clientes Cliente { get { return cliente; } set { cliente = value; } }
         public Sucursales Sucursal { get { return sucursal; } set { sucursal = value; } }
         public int TipoPago { get { return tipoPago; } set { tipoPago = value; } }
-        public List<DetallesFactura> LDetalles { get { return lDetalles; } }
+        public List<DetallesFactura> LDetalles { get { return lDetalles; } set { lDetalles = value; } }
 
 
         public Facturas() 

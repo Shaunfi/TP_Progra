@@ -162,7 +162,17 @@ namespace Backend.Datos.Implementacion
 
             AccesoDatosDAO.ObtenerInstancia().ProcedureNonExecuter("SP_CONSULTAR_STOCK", listParam);
 
-            return Convert.ToInt32(outParam.Value);
+            int st;
+            try
+            {
+                st = Convert.ToInt32(outParam.Value);
+            }
+            catch (Exception ex)
+            {
+                st = 0;
+            }
+
+            return st;
         }
     }
 }

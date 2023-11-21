@@ -22,7 +22,7 @@ namespace Backend.Datos.Implementacion
 
                 t = cnn.BeginTransaction();
 
-                daoDetalles.StockSinVencer(factura, t);
+                //daoDetalles.StockSinVencer(factura, t);
 
                 listParam.Clear();
 
@@ -36,13 +36,15 @@ namespace Backend.Datos.Implementacion
 
                 AccesoDatosDAO.ObtenerInstancia().ProcedureNonExecuter("SP_INSERTAR_FACTURAS", listParam, t);
 
-                //factura.NroFactura = Convert.ToInt32(paramOut.Value);
+                // esto va porque sino tira error cuand alguna factura no hizo bien la t
+                // y queda un salto entre los nro de factura
+                factura.NroFactura = Convert.ToInt32(paramOut.Value);
 
                 daoDetalles.Agregar(factura, t);
 
                 daoDetalles.ModificarStock(factura, t);
 
-                t.Commit();
+                t?.Commit();
             }
             catch
             {
