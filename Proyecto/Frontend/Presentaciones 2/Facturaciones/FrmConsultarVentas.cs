@@ -82,7 +82,7 @@ namespace Frontend.Presentaciones_2.Facturaciones
 
         private async void ListarClientes(DateTime fDesde, DateTime fHasta, string cliente, int nroF)
         {
-            string url = $"https://localhost:7265/api/Facturas/Consultar/{fDesde}/{fHasta}{cliente}/{nroF}";
+            string url = $"https://localhost:7265/api/Facturas/Consultar/{fDesde}/{fHasta}/{cliente}/{nroF}";
             var result = await ClientSingleton.GetInstance().GetAsync(url);
             var list = JsonConvert.DeserializeObject<List<Facturas>>(result);
 
