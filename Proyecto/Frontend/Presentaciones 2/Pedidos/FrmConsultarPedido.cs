@@ -115,5 +115,16 @@ namespace Frontend.Presentaciones_2.PPedidos
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void btnSalir2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FrmConsultarPedido_Load_1(object sender, EventArgs e)
+        {
+            dgvLotes.Visible = false;
+            
+        }
     }
 }

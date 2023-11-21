@@ -73,5 +73,10 @@ namespace Frontend.Presentaciones_2.PProveedores
                 dgvConsultarProveedor.Rows.Add(new object[] { p.CodProveedor, p.NombreProveedor, direccion, p.Telefono, p.Email, "modificar" });
             }
         }
+
+        private void dgvConsultarProveedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
