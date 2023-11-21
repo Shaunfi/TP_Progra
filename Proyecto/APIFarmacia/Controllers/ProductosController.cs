@@ -39,18 +39,19 @@ namespace APIFarmacia.Controllers
 
         // GET api/<ProductosController>
         [HttpGet("filtro")]
-        public IActionResult GetFiltro(string descripcion, int tipoProducto)
+        public IActionResult GetFiltro(int tipoProducto, string? descripcion)
         {
             
             if(tipoProducto == 0)
             {
                 return BadRequest("enviar parametros");
             }
-            if(descripcion != null || descripcion != "" || descripcion != String.Empty)
+            descripcion = descripcion != null ? descripcion : String.Empty;
+            if(descripcion == null || descripcion == "" || descripcion == String.Empty)
             {
-                return Ok(servicio.Productos.ListarFiltro(descripcion, tipoProducto));
+                return Ok(servicio.Productos.ListarFiltro(tipoProducto));
             }
-            return Ok(servicio.Productos.ListarFiltro(tipoProducto));
+            return Ok(servicio.Productos.ListarFiltro(descripcion, tipoProducto));
 
         }
 

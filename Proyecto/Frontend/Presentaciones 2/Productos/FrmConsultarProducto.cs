@@ -84,7 +84,7 @@ namespace Frontend.Presentaciones_2.PProductos
         }
         private bool Validar()
         {
-            // Por hacer
+            // Por hacer, no hay mucho por validar
             return true;
         }
 
@@ -142,9 +142,11 @@ namespace Frontend.Presentaciones_2.PProductos
             }
         }
 
-        private async void CargarProductosFiltro(string fDescripcion, int tipoProd)
+        private async void CargarProductosFiltro(string descripcion, int tipoProd)
         {
-            string url = $"https://localhost:7265/api/Productos/filtro?descripcion={fDescripcion}&tipoProducto={tipoProd}";
+            string url = String.Format("https://localhost:7265/api/Productos/filtro?tipoProducto={0}", tipoProd);
+            if (!String.IsNullOrEmpty(descripcion))
+                url = String.Format(url + "&descripcion={0}", descripcion);
             var result = await ClientSingleton.GetInstance().GetAsync(url);
             var list = JsonConvert.DeserializeObject<List<Productos>>(result);
 
