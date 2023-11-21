@@ -73,16 +73,20 @@ namespace Frontend.Presentaciones_2.Facturaciones
             {
                 nroFactura = Convert.ToInt32(txtNroFactura.Text);
             }
-            DateTime fechaDesde = dtpDesde.Value;
-            DateTime fechaHasta = dtpHasta.Value;
-            string cliente = txtCliente.Text;
+            String fecDesde, fecHasta, cliente;
+            fecDesde = Uri.EscapeDataString(dtpDesde.Value.ToString("yyyy/MM/dd"));
+            fecHasta = Uri.EscapeDataString(dtpHasta.Value.ToString("yyyy/MM/dd"));
+            cliente = Uri.EscapeDataString(txtCliente.Text);
 
-            ListarClientes(fechaDesde, fechaHasta, cliente, nroFactura);            
+            ListarClientes(fecDesde, fecHasta, cliente, nroFactura);            
         }
 
-        private async void ListarClientes(DateTime fDesde, DateTime fHasta, string cliente, int nroF)
+        private async void ListarClientes(string desde, string hasta, string cliente, int nroF)
         {
-            string url = $"https://localhost:7265/api/Facturas/Consultar/{fDesde}/{fHasta}/{cliente}/{nroF}";
+            // string url = $"https://localhost:7265/api/Facturas/Consultar/{desde}/{hasta}/{cliente}/{nroF}";
+            string url = string.Format("https://localhost:7265/api/Facturas/Consultar?desde={0}&hasta={1}&cliente={2}&nroF={3}", desde, hasta, cliente, nroF);
+            //if (!String.IsNullOrEmpty(cliente))
+            //    url = String.Format(url + "&cliente={0}", cliente);
             var result = await ClientSingleton.GetInstance().GetAsync(url);
             var list = JsonConvert.DeserializeObject<List<Facturas>>(result);
 

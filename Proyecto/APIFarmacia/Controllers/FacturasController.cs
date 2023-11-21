@@ -23,14 +23,16 @@ namespace APIFarmacia.Controllers
 
 
         // GET: api/<FacturasController>
-        [HttpGet("Consultar/{fHasta}/{fDesde}/{cliente}/{nroF}")]
-        public IActionResult Get(DateTime fHasta, DateTime fDesde, string cliente, int nroF)
+        //[HttpGet("Consultar/{hasta}/{desde}/{cliente}/{nroF}")]
+        [HttpGet("Consultar")]
+        public IActionResult Get(DateTime hasta, DateTime desde, string cliente, int nroF)
         {
             List<object> list = null;
             try
             {
                 // ver si algun parametro puede ser null, manejarlo
-                list = servicio.Facturas.ListarFiltros(fDesde, fHasta, cliente, nroF);
+                cliente = cliente != null ? cliente : String.Empty;
+                list = servicio.Facturas.ListarFiltros(desde, hasta, cliente, nroF);
                 return Ok(list);
             }
             catch (Exception ex)
