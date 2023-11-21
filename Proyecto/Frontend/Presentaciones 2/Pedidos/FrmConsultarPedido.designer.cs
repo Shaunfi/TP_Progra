@@ -272,7 +272,7 @@
             this.colFechaVencimiento,
             this.ColPro,
             this.dataGridViewButtonColumn1});
-            this.dgvLotes.Location = new System.Drawing.Point(14, 283);
+            this.dgvLotes.Location = new System.Drawing.Point(13, 283);
             this.dgvLotes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgvLotes.Name = "dgvLotes";
             this.dgvLotes.ReadOnly = true;

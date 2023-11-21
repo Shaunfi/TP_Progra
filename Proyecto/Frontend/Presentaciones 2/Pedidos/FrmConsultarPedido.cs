@@ -9,6 +9,7 @@ namespace Frontend.Presentaciones_2.PPedidos
     public partial class FrmConsultarPedido : Form
     {
         IServicios servicios;
+        Sucursales sucursal;
 
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -17,10 +18,11 @@ namespace Frontend.Presentaciones_2.PPedidos
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
 
-        public FrmConsultarPedido(FactoryAbs factory)
+        public FrmConsultarPedido(FactoryAbs factory, Sucursales sucursal)
         {
             InitializeComponent();
             servicios = factory.CrearServicio();
+            this.sucursal = sucursal;
         }
 
         private void btnSalir2_Click(object sender, EventArgs e)
@@ -111,20 +113,14 @@ namespace Frontend.Presentaciones_2.PPedidos
         {
             dgvConsultarPedidos.Rows.Clear();
 
-            int sucursal = 1;
+            int nroS = sucursal.CodSucursal;
             int nroPedido = 0;
             DateTime desde = dtpDesde.Value;
             DateTime hasta = dtpHasta.Value;
-            if (int.TryParse(nudNroPedido.Text, out _))
+
+            foreach (Pedidos p in servicios.Pedidos.ListarFiltro(desde, hasta, nroS))
             {
-                nroPedido = Convert.ToInt32(nudNroPedido.Text);
-            }
-            if (nroPedido > 0)
-            {
-                foreach (Pedidos p in servicios.Pedidos.ListarFiltro(desde, hasta, nroPedido))
-                {
-                    dgvConsultarPedidos.Rows.Add(new object[] { p, p.CodPedido, p.FechaPedido, p.Sucursal.CodSucursal, p.TipoPago, "Ver Lotes" });
-                }
+                dgvConsultarPedidos.Rows.Add(new object[] { p, p.CodPedido, p.FechaPedido, p.Sucursal.CodSucursal, p.TipoPago, "Ver Lotes" });
             }
         }
     }

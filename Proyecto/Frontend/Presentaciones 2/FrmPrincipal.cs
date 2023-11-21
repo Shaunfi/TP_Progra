@@ -228,7 +228,7 @@ namespace Frontend.Presentaciones_2
 
         private void btnConsultarPedido_Click(object sender, EventArgs e)
         {
-            new FrmConsultarPedido(fabrica).ShowDialog();
+            new FrmConsultarPedido(fabrica, sucursal).ShowDialog();
             hideSubMenu();
         }
 

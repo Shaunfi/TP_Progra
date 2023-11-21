@@ -76,30 +76,6 @@ namespace Backend.Datos.Implementacion
 
             return lista;
         }
-        public List<object> ListarFiltro(DateTime desde, DateTime hasta)
-        {
-            List<object> lista = new List<object>();
-
-            List<SqlParameter> listParam = new List<SqlParameter>();
-            listParam.Add(new SqlParameter("@fecha_desde", desde));
-            listParam.Add(new SqlParameter("@fecha_hasta", hasta));
-
-            DataTable tabla = AccesoDatosDAO.ObtenerInstancia().ProcedureReader("SP_CONSULTAR_PEDIDOS_FILTROS", listParam);
-
-            foreach (DataRow row in tabla.Rows)
-            {
-                Pedidos p = new Pedidos();
-                p.CodPedido = Convert.ToInt32(row[0].ToString());
-                p.FechaPedido = Convert.ToDateTime(row[1].ToString());
-                p.Sucursal.CodSucursal = Convert.ToInt32(row[2].ToString());
-                // p.LLotes como manejar los lotes
-
-
-                lista.Add(p);
-            }
-
-            return lista;
-        }
         public List<object> ListarFiltro(DateTime desde, DateTime hasta, int sucursal)
         {
             List<object> lista = new List<object>();
@@ -125,6 +101,31 @@ namespace Backend.Datos.Implementacion
 
             return lista;
         }
+        //public List<object> ListarFiltro(DateTime desde, DateTime hasta, int sucursal)
+        //{
+        //    List<object> lista = new List<object>();
+
+        //    List<SqlParameter> listParam = new List<SqlParameter>();
+        //    listParam.Add(new SqlParameter("@fecha_desde", desde));
+        //    listParam.Add(new SqlParameter("@fecha_hasta", hasta));
+        //    listParam.Add(new SqlParameter("@sucursal", sucursal));
+
+        //    DataTable tabla = AccesoDatosDAO.ObtenerInstancia().ProcedureReader("SP_CONSULTAR_PEDIDOS_FILTROS", listParam);
+
+        //    foreach (DataRow row in tabla.Rows)
+        //    {
+        //        Pedidos p = new Pedidos();
+        //        p.CodPedido = Convert.ToInt32(row[0].ToString());
+        //        p.FechaPedido = Convert.ToDateTime(row[1].ToString());
+        //        p.Sucursal.CodSucursal = Convert.ToInt32(row[2].ToString());
+        //        // p.LLotes como manejar los lotes
+
+
+        //        lista.Add(p);
+        //    }
+
+        //    return lista;
+        //}
         public List<object> ListarFiltro(DateTime desde, DateTime hasta, int sucursal, int codPedido)
         {
             List<object> lista = new List<object>();
