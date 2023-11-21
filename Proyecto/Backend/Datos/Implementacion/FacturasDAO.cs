@@ -22,7 +22,7 @@ namespace Backend.Datos.Implementacion
 
                 t = cnn.BeginTransaction();
 
-                //daoDetalles.StockSinVencer(factura, t);
+                daoDetalles.StockSinVencer(factura, t);
 
                 listParam.Clear();
 

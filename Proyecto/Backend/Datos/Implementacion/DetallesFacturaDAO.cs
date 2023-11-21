@@ -19,7 +19,7 @@ namespace Backend.Datos.Implementacion
                 listParam.Add(new SqlParameter("@cod_sucursal", factura.Sucursal.CodSucursal));
                 listParam.Add(new SqlParameter("@cod_producto", df.Producto.CodProducto));
 
-                AccesoDatosDAO.ObtenerInstancia().ProcedureNonExecuter("SP_STOCK_FECHA_VENCIMIENTO", listParam);
+                AccesoDatosDAO.ObtenerInstancia().ProcedureNonExecuter("SP_STOCK_FECHA_VENCIMIENTO", listParam, t);
             }
 
         }
